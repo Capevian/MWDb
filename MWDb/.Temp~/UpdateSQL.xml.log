@@ -1,0 +1,70 @@
+[15 Dez 2011 15:12:15] DEBUG Executing SQL script
+[15 Dez 2011 15:12:15] INFO ================================================================================
+[15 Dez 2011 15:12:15] INFO outputPath= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.xml'
+[15 Dez 2011 15:12:15] INFO onError= 'continue'
+[15 Dez 2011 15:12:15] INFO statementSeparator= ';'
+[15 Dez 2011 15:12:15] INFO derby.system.home= 'D:\Programming\WebRatio WorkSpace\.metadata\.plugins\com.webratio.commons.db\derby'
+[15 Dez 2011 15:12:15] INFO password= 'LAroche555'
+[15 Dez 2011 15:12:15] INFO url= 'jdbc:mysql://localhost:3306/mwdb'
+[15 Dez 2011 15:12:15] INFO username= 'andre'
+[15 Dez 2011 15:12:15] INFO autoCommit= 'false'
+[15 Dez 2011 15:12:15] INFO outputLogPath= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.xml.log'
+[15 Dez 2011 15:12:15] INFO driverClass= 'com.mysql.jdbc.Driver'
+[15 Dez 2011 15:12:15] INFO encoding= ''
+[15 Dez 2011 15:12:15] INFO eventSocketPort= '53119'
+[15 Dez 2011 15:12:15] INFO sqlScript= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.sql'
+[15 Dez 2011 15:12:15] INFO ================================================================================
+[15 Dez 2011 15:12:15] INFO Connecting to the Database...
+[15 Dez 2011 15:12:16] INFO Database connection estabilished
+[15 Dez 2011 15:12:16] INFO transaction isolation: 4
+[15 Dez 2011 15:12:16] DEBUG ================================================================================
+[15 Dez 2011 15:12:16] DEBUG Executing SQL script file: D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.sql
+[15 Dez 2011 15:12:16] DEBUG Executing statement:  create table `group` ( `oid`  integer  not null, `groupname`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:16] DEBUG Executing statement:    create table `module` ( `oid`  integer  not null, `moduleid`  varchar(255), `modulename`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:16] DEBUG Executing statement:    create table `user` ( `oid_user`  integer  not null, `username`  varchar(255), `password`  varchar(255), `email`  varchar(255), primary key (`oid_user`) )
+[15 Dez 2011 15:12:16] DEBUG Executing statement:    create table `marca` ( `oid`  integer  not null, `nomemarca`  varchar(255), `logo`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:16] DEBUG Executing statement:    create table `fotos_modelo` ( `oid`  integer  not null, `foto`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:16] DEBUG Executing statement:    create table `avaliacao` ( `avaliacao`  integer, `useroiduser`  integer  not null, `miniaturaoidmini`  integer  not null, primary key (`useroiduser`, `miniaturaoidmini`) )
+[15 Dez 2011 15:12:17] DEBUG Executing statement:    create table `modelo` ( `oid`  integer  not null, `nomemodelo`  varchar(255), `anolancamento`  date, `website`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:17] DEBUG Executing statement:    create table `miniatura` ( `oid_mini`  integer  not null, `descricao`  varchar(255), primary key (`oid_mini`) )
+[15 Dez 2011 15:12:17] DEBUG Executing statement:    create table `tipo` ( `oid`  integer  not null, `descricao`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:17] DEBUG Executing statement:    create table `escala` ( `oid`  integer  not null, `descricao`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:17] DEBUG Executing statement:    create table `construtor` ( `oid`  integer  not null, `nomeconstrutor`  varchar(255), `logo`  varchar(255), `website`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:17] DEBUG Executing statement:    create table `comentario` ( `oid`  integer  not null, `timestamp`  datetime, `texto`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:17] DEBUG Executing statement:    create table `fotos_miniatura` ( `oid`  integer  not null, `foto`  varchar(255), primary key (`oid`) )
+[15 Dez 2011 15:12:18] DEBUG Executing statement:    alter table `group`  add column  `module_oid`  integer
+[15 Dez 2011 15:12:18] DEBUG Executing statement:  alter table `group`   add index fk_group_module (`module_oid`), add constraint fk_group_module foreign key (`module_oid`) references `module` (`oid`)
+[15 Dez 2011 15:12:18] DEBUG Executing statement:    create table `group_module` ( `group_oid`  integer not null, `module_oid`  integer not null, primary key (`group_oid`, `module_oid`) )
+[15 Dez 2011 15:12:18] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_group (`group_oid`), add constraint fk_group_module_group foreign key (`group_oid`) references `group` (`oid`)
+[15 Dez 2011 15:12:18] DEBUG Executing statement:  alter table `group_module`   add index fk_group_module_module (`module_oid`), add constraint fk_group_module_module foreign key (`module_oid`) references `module` (`oid`)
+[15 Dez 2011 15:12:19] DEBUG Executing statement:    alter table `user`  add column  `group_oid`  integer
+[15 Dez 2011 15:12:19] DEBUG Executing statement:  alter table `user`   add index fk_user_group (`group_oid`), add constraint fk_user_group foreign key (`group_oid`) references `group` (`oid`)
+[15 Dez 2011 15:12:19] DEBUG Executing statement:    create table `user_group` ( `user_oid_user`  integer not null, `group_oid`  integer not null, primary key (`user_oid_user`, `group_oid`) )
+[15 Dez 2011 15:12:19] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_user (`user_oid_user`), add constraint fk_user_group_user foreign key (`user_oid_user`) references `user` (`oid_user`)
+[15 Dez 2011 15:12:19] DEBUG Executing statement:  alter table `user_group`   add index fk_user_group_group (`group_oid`), add constraint fk_user_group_group foreign key (`group_oid`) references `group` (`oid`)
+[15 Dez 2011 15:12:20] DEBUG Executing statement:    alter table `modelo`  add column  `marca_oid`  integer
+[15 Dez 2011 15:12:20] DEBUG Executing statement:  alter table `modelo`   add index fk_modelo_marca (`marca_oid`), add constraint fk_modelo_marca foreign key (`marca_oid`) references `marca` (`oid`)
+[15 Dez 2011 15:12:20] DEBUG Executing statement:    alter table `fotos_miniatura`  add column  `miniatura_oid_mini`  integer
+[15 Dez 2011 15:12:20] DEBUG Executing statement:  alter table `fotos_miniatura`   add index fk_fotos_miniatura_miniatura (`miniatura_oid_mini`), add constraint fk_fotos_miniatura_miniatura foreign key (`miniatura_oid_mini`) references `miniatura` (`oid_mini`)
+[15 Dez 2011 15:12:20] DEBUG Executing statement:    alter table `modelo`  add column  `fotos_modelo_oid`  integer
+[15 Dez 2011 15:12:21] DEBUG Executing statement:  alter table `modelo`   add index fk_modelo_fotos_modelo (`fotos_modelo_oid`), add constraint fk_modelo_fotos_modelo foreign key (`fotos_modelo_oid`) references `fotos_modelo` (`oid`)
+[15 Dez 2011 15:12:21] DEBUG Executing statement:    alter table `avaliacao`  add column  `user_oid_user`  integer
+[15 Dez 2011 15:12:21] DEBUG Executing statement:  alter table `avaliacao`   add index fk_avaliacao_user (`user_oid_user`), add constraint fk_avaliacao_user foreign key (`user_oid_user`) references `user` (`oid_user`)
+[15 Dez 2011 15:12:21] DEBUG Executing statement:    alter table `avaliacao`  add column  `miniatura_oid_mini`  integer
+[15 Dez 2011 15:12:21] DEBUG Executing statement:  alter table `avaliacao`   add index fk_avaliacao_miniatura (`miniatura_oid_mini`), add constraint fk_avaliacao_miniatura foreign key (`miniatura_oid_mini`) references `miniatura` (`oid_mini`)
+[15 Dez 2011 15:12:22] DEBUG Executing statement:    alter table `marca`  add column  `tipo_oid`  integer
+[15 Dez 2011 15:12:22] DEBUG Executing statement:  alter table `marca`   add index fk_marca_tipo (`tipo_oid`), add constraint fk_marca_tipo foreign key (`tipo_oid`) references `tipo` (`oid`)
+[15 Dez 2011 15:12:22] DEBUG Executing statement:    alter table `miniatura`  add column  `modelo_oid`  integer
+[15 Dez 2011 15:12:22] DEBUG Executing statement:  alter table `miniatura`   add index fk_miniatura_modelo (`modelo_oid`), add constraint fk_miniatura_modelo foreign key (`modelo_oid`) references `modelo` (`oid`)
+[15 Dez 2011 15:12:23] DEBUG Executing statement:    alter table `miniatura`  add column  `escala_oid`  integer
+[15 Dez 2011 15:12:23] DEBUG Executing statement:  alter table `miniatura`   add index fk_miniatura_escala (`escala_oid`), add constraint fk_miniatura_escala foreign key (`escala_oid`) references `escala` (`oid`)
+[15 Dez 2011 15:12:23] DEBUG Executing statement:    alter table `miniatura`  add column  `construtor_oid`  integer
+[15 Dez 2011 15:12:23] DEBUG Executing statement:  alter table `miniatura`   add index fk_miniatura_construtor (`construtor_oid`), add constraint fk_miniatura_construtor foreign key (`construtor_oid`) references `construtor` (`oid`)
+[15 Dez 2011 15:12:23] DEBUG Executing statement:    alter table `comentario`  add column  `miniatura_oid_mini`  integer
+[15 Dez 2011 15:12:24] DEBUG Executing statement:  alter table `comentario`   add index fk_comentario_miniatura (`miniatura_oid_mini`), add constraint fk_comentario_miniatura foreign key (`miniatura_oid_mini`) references `miniatura` (`oid_mini`)
+[15 Dez 2011 15:12:24] DEBUG Executing statement:    alter table `comentario`  add column  `user_oid_user`  integer
+[15 Dez 2011 15:12:24] DEBUG Executing statement:  alter table `comentario`   add index fk_comentario_user (`user_oid_user`), add constraint fk_comentario_user foreign key (`user_oid_user`) references `user` (`oid_user`)
+[15 Dez 2011 15:12:24] DEBUG ================================================================================
+[15 Dez 2011 15:12:24] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[15 Dez 2011 15:12:24] INFO Database connection closed
+[15 Dez 2011 15:12:24] DEBUG Total time: 9263 milliseconds

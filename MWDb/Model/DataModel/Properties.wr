@@ -1,122 +1,187 @@
-<DataModel xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="60" gr:y="20" gr:hideAttributes="false" attributeOrder="userOID userName password email">
-    <Attribute name="oid" id="userOID" type="integer" key="true"/>
-    <Attribute name="userName" id="userName" type="string"/>
-    <Attribute name="password" id="password" type="password"/>
-    <Attribute name="email" id="email" type="string"/>
+<DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
+  <Entity id="User" name="User" duration="persistent" gr:x="60" gr:y="20" gr:hideAttributes="false" attributeOrder="userOID userName password email" db:database="db2" db:table="user">
+    <Attribute name="oid_user" id="userOID" type="integer" key="true" db:column="oid_user"/>
+    <Attribute name="userName" id="userName" type="string" db:column="username"/>
+    <Attribute name="password" id="password" type="password" db:column="password"/>
+    <Attribute name="email" id="email" type="string" db:column="email"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="350" gr:y="40" gr:hideAttributes="false" attributeOrder="groupOID groupName">
-    <Attribute name="oid" id="groupOID" type="integer" key="true"/>
-    <Attribute name="groupName" id="groupName" type="string"/>
+  <Entity id="Group" name="Group" duration="persistent" gr:x="350" gr:y="40" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db2" db:table="group">
+    <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="680" gr:y="30" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName">
-    <Attribute name="oid" id="moduleOID" type="integer" key="true"/>
-    <Attribute name="moduleID" id="moduleID" type="string"/>
-    <Attribute name="moduleName" id="moduleName" type="string"/>
+  <Entity id="Module" name="Module" duration="persistent" gr:x="680" gr:y="30" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db2" db:table="module">
+    <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
+    <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
+    <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
   </Entity>
-  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group">
-    <RelationshipRole1 id="User2Group" name="groups" maxCard="N"/>
-    <RelationshipRole2 id="Group2User" name="users" maxCard="N"/>
+  <Relationship id="User2Group_Group2User" name="User_Group" sourceEntity="User" targetEntity="Group" db:database="db2" db:table="user_group">
+    <RelationshipRole1 id="User2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Group2User" name="users" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44">
-    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1"/>
-    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N"/>
+  <Relationship id="User2DefaultGroup_DefaultGroup2User" name="User_DefaultGroup" sourceEntity="User" targetEntity="Group" gr:bendpoints="113,42,-112,44" db:database="db2" db:table="user">
+    <RelationshipRole1 id="User2DefaultGroup" name="defaultGroup" maxCard="1">
+      <db:JoinColumn attribute="userOID" name="oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultGroup2User" name="defaultUsers" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module">
-    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1"/>
-    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N"/>
+  <Relationship id="Group2DefaultModule_DefaultModule2Group" name="Group_DefaultModule" sourceEntity="Group" targetEntity="Module" db:database="db2" db:table="group">
+    <RelationshipRole1 id="Group2DefaultModule" name="defaultModule" maxCard="1">
+      <db:JoinColumn attribute="groupOID" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="DefaultModule2Group" name="defaultGroups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41">
-    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N"/>
-    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N"/>
+  <Relationship id="Group2Module_Module2Group" name="Group_Module" sourceEntity="Group" targetEntity="Module" gr:bendpoints="110,41,-115,41" db:database="db2" db:table="group_module">
+    <RelationshipRole1 id="Group2Module" name="modules" maxCard="N">
+      <db:JoinColumn attribute="groupOID" name="group_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="Module2Group" name="groups" maxCard="N">
+      <db:JoinColumn attribute="moduleOID" name="module_oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="70" gr:y="570" id="ent1" name="Marca" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att18">
-    <Attribute id="ent1#att1" key="true" name="oid" type="integer"/>
-    <Attribute id="ent1#att2" name="NomeMarca" type="string"/>
-    <Attribute id="ent1#att18" name="Logo" type="blob"/>
+  <Entity gr:x="20" gr:y="540" id="ent1" name="Marca" duration="persistent" attributeOrder="ent1#att1 ent1#att2 ent1#att18" db:database="db2" db:table="marca">
+    <Attribute id="ent1#att1" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent1#att2" name="NomeMarca" type="string" db:column="nomemarca"/>
+    <Attribute id="ent1#att18" name="Logo" type="blob" db:column="logo"/>
   </Entity>
-  <Entity gr:x="20" gr:y="360" id="ent2" name="Modelo" duration="persistent" attributeOrder="ent2#att3 ent2#att4 ent2#att5 ent2#att8">
-    <Attribute id="ent2#att3" key="true" name="oid" type="integer"/>
-    <Attribute id="ent2#att4" name="NomeModelo" type="string"/>
-    <Attribute id="ent2#att5" name="AnoLan&#231;amento" type="date"/>
-    <Attribute id="ent2#att8" name="Website" type="string"/>
+  <Entity gr:x="20" gr:y="360" id="ent2" name="Modelo" duration="persistent" attributeOrder="ent2#att3 ent2#att4 ent2#att5 ent2#att8" db:database="db2" db:table="modelo">
+    <Attribute id="ent2#att3" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent2#att4" name="NomeModelo" type="string" db:column="nomemodelo"/>
+    <Attribute id="ent2#att5" name="AnoLancamento" type="date" db:column="anolancamento"/>
+    <Attribute id="ent2#att8" name="Website" type="string" db:column="website"/>
   </Entity>
-  <Relationship id="rel1" name="Marca_Modelo" sourceEntity="ent1" targetEntity="ent2" gr:bendpoints="-41,-84,1,114">
-    <RelationshipRole1 id="rel1#role1" name="MarcaToModelo" maxCard="1"/>
-    <RelationshipRole2 id="rel1#role2" name="ModeloToMarca" maxCard="N"/>
+  <Relationship id="rel1" name="Marca_Modelo" sourceEntity="ent1" targetEntity="ent2" db:database="db2" db:table="modelo">
+    <RelationshipRole1 id="rel1#role1" name="MarcaToModelo" maxCard="N">
+      <db:JoinColumn attribute="ent1#att1" name="marca_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel1#role2" name="ModeloToMarca" maxCard="1">
+      <db:JoinColumn attribute="ent2#att3" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="330" gr:y="330" id="ent3" name="Miniatura" duration="persistent" attributeOrder="ent3#att6 ent3#att7">
-    <Attribute id="ent3#att6" key="true" name="oid" type="integer"/>
-    <Attribute id="ent3#att7" name="Descricao" type="string"/>
+  <Entity gr:x="330" gr:y="330" id="ent3" name="Miniatura" duration="persistent" attributeOrder="ent3#att6 ent3#att7" db:database="db2" db:table="miniatura">
+    <Attribute id="ent3#att6" key="true" name="oid_mini" type="integer" db:column="oid_mini"/>
+    <Attribute id="ent3#att7" name="Descricao" type="string" db:column="descricao"/>
   </Entity>
-  <Relationship id="rel2" name="Modelo_Miniatura" sourceEntity="ent2" targetEntity="ent3">
-    <RelationshipRole1 id="rel2#role3" name="ModeloToMiniatura" maxCard="1"/>
-    <RelationshipRole2 id="rel2#role4" name="MiniaturaToModelo" maxCard="N"/>
+  <Relationship id="rel2" name="Modelo_Miniatura" sourceEntity="ent2" targetEntity="ent3" db:database="db2" db:table="miniatura">
+    <RelationshipRole1 id="rel2#role3" name="ModeloToMiniatura" maxCard="N">
+      <db:JoinColumn attribute="ent2#att3" name="modelo_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel2#role4" name="MiniaturaToModelo" maxCard="1">
+      <db:JoinColumn attribute="ent3#att6" name="oid_mini"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="230" gr:y="580" id="ent4" name="Tipo" duration="persistent" attributeOrder="ent4#att9 ent4#att10">
-    <Attribute id="ent4#att9" key="true" name="oid" type="integer"/>
-    <Attribute id="ent4#att10" name="Descricao" type="string"/>
+  <Entity gr:x="240" gr:y="540" id="ent4" name="Tipo" duration="persistent" attributeOrder="ent4#att9 ent4#att10" db:database="db2" db:table="tipo">
+    <Attribute id="ent4#att9" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent4#att10" name="Descricao" type="string" db:column="descricao"/>
   </Entity>
-  <Relationship id="rel3" name="Tipo_Modelo" sourceEntity="ent4" targetEntity="ent2" gr:bendpoints="-1,-120,174,65">
-    <RelationshipRole1 id="rel3#role5" name="TipoToModelo" maxCard="1"/>
-    <RelationshipRole2 id="rel3#role6" name="ModeloToTipo" maxCard="N"/>
-  </Relationship>
-  <Entity gr:x="740" gr:y="330" id="ent5" name="Escala" duration="persistent" attributeOrder="ent5#att11 ent5#att12">
-    <Attribute id="ent5#att11" key="true" name="oid" type="integer"/>
-    <Attribute id="ent5#att12" name="Descricao" type="string"/>
+  <Entity gr:x="740" gr:y="330" id="ent5" name="Escala" duration="persistent" attributeOrder="ent5#att11 ent5#att12" db:database="db2" db:table="escala">
+    <Attribute id="ent5#att11" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent5#att12" name="Descricao" type="string" db:column="descricao"/>
   </Entity>
-  <Relationship id="rel4" name="Escala_Miniatura" sourceEntity="ent5" targetEntity="ent3">
-    <RelationshipRole1 id="rel4#role7" name="EscalaToMiniatura" maxCard="1"/>
-    <RelationshipRole2 id="rel4#role8" name="MiniaturaToEscala" maxCard="N"/>
+  <Relationship id="rel4" name="Escala_Miniatura" sourceEntity="ent5" targetEntity="ent3" db:database="db2" db:table="miniatura">
+    <RelationshipRole1 id="rel4#role7" name="EscalaToMiniatura" maxCard="N">
+      <db:JoinColumn attribute="ent5#att11" name="escala_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel4#role8" name="MiniaturaToEscala" maxCard="1">
+      <db:JoinColumn attribute="ent3#att6" name="oid_mini"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="680" gr:y="480" id="ent6" name="Construtor" duration="persistent" attributeOrder="ent6#att13 ent6#att14 ent6#att15 ent6#att16">
-    <Attribute id="ent6#att13" key="true" name="oid" type="integer"/>
-    <Attribute id="ent6#att14" name="NomeConstrutor" type="string"/>
-    <Attribute id="ent6#att15" name="Logo" type="blob"/>
-    <Attribute id="ent6#att16" name="Website" type="string"/>
+  <Entity gr:x="680" gr:y="480" id="ent6" name="Construtor" duration="persistent" attributeOrder="ent6#att13 ent6#att14 ent6#att15 ent6#att16" db:database="db2" db:table="construtor">
+    <Attribute id="ent6#att13" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent6#att14" name="NomeConstrutor" type="string" db:column="nomeconstrutor"/>
+    <Attribute id="ent6#att15" name="Logo" type="blob" db:column="logo"/>
+    <Attribute id="ent6#att16" name="Website" type="string" db:column="website"/>
   </Entity>
-  <Relationship id="rel5" name="Construtor_Miniatura" sourceEntity="ent6" targetEntity="ent3" gr:bendpoints="-259,-59,110,116">
-    <RelationshipRole1 id="rel5#role9" name="ConstrutorToMiniatura" maxCard="1"/>
-    <RelationshipRole2 id="rel5#role10" name="MiniaturaToConstrutor" maxCard="N"/>
+  <Relationship id="rel5" name="Construtor_Miniatura" sourceEntity="ent6" targetEntity="ent3" gr:bendpoints="-259,-59,110,116" db:database="db2" db:table="miniatura">
+    <RelationshipRole1 id="rel5#role9" name="ConstrutorToMiniatura" maxCard="N">
+      <db:JoinColumn attribute="ent6#att13" name="construtor_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel5#role10" name="MiniaturaToConstrutor" maxCard="1">
+      <db:JoinColumn attribute="ent3#att6" name="oid_mini"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="330" gr:y="180" id="ent7" name="Coment&#225;rio" duration="persistent" attributeOrder="ent7#att19 ent7#att20 ent7#att25">
-    <Attribute id="ent7#att19" key="true" name="oid" type="integer"/>
-    <Attribute id="ent7#att20" name="Timestamp" type="timestamp"/>
-    <Attribute id="ent7#att25" name="Texto" type="string"/>
+  <Entity gr:x="330" gr:y="180" id="ent7" name="Comentario" duration="persistent" attributeOrder="ent7#att19 ent7#att20 ent7#att25" db:database="db2" db:table="comentario">
+    <Attribute id="ent7#att19" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent7#att20" name="Timestamp" type="timestamp" db:column="timestamp"/>
+    <Attribute id="ent7#att25" name="Texto" type="string" db:column="texto"/>
   </Entity>
-  <Relationship id="rel6" name="Coment&#225;rio_Miniatura" sourceEntity="ent7" targetEntity="ent3">
-    <RelationshipRole1 id="rel6#role11" name="Coment&#225;rioToMiniatura" maxCard="N"/>
-    <RelationshipRole2 id="rel6#role12" name="MiniaturaToComent&#225;rio" maxCard="1"/>
+  <Relationship id="rel6" name="Coment&#225;rio_Miniatura" sourceEntity="ent7" targetEntity="ent3" db:database="db2" db:table="comentario">
+    <RelationshipRole1 id="rel6#role11" name="Coment&#225;rioToMiniatura" maxCard="1">
+      <db:JoinColumn attribute="ent7#att19" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel6#role12" name="MiniaturaToComent&#225;rio" maxCard="N">
+      <db:JoinColumn attribute="ent3#att6" name="miniatura_oid_mini"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel7" name="Coment&#225;rio_User" sourceEntity="ent7" targetEntity="User" gr:bendpoints="-277,-1,2,147">
-    <RelationshipRole1 id="rel7#role13" name="Coment&#225;rioToUser" maxCard="N"/>
-    <RelationshipRole2 id="rel7#role14" name="UserToComent&#225;rio" maxCard="1"/>
+  <Relationship id="rel7" name="Coment&#225;rio_User" sourceEntity="ent7" targetEntity="User" gr:bendpoints="-277,-1,2,147" db:database="db2" db:table="comentario">
+    <RelationshipRole1 id="rel7#role13" name="Coment&#225;rioToUser" maxCard="1">
+      <db:JoinColumn attribute="ent7#att19" name="oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel7#role14" name="UserToComent&#225;rio" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="580" gr:y="200" id="ent8" name="Avalia&#231;&#227;o" duration="persistent" attributeOrder="ent8#att22">
-    <Attribute id="ent8#att22" name="Avalia&#231;&#227;o" type="integer"/>
+  <Entity gr:x="460" gr:y="560" id="ent9" name="Fotos_Miniatura" duration="persistent" attributeOrder="ent9#att23 ent9#att24" db:database="db2" db:table="fotos_miniatura">
+    <Attribute id="ent9#att23" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent9#att24" name="foto" type="blob" db:column="foto"/>
   </Entity>
-  <Relationship id="rel8" name="User_Avalia&#231;&#227;o" sourceEntity="User" targetEntity="ent8" gr:bendpoints="41,85,-456,-58;514,85,0,-58">
-    <RelationshipRole1 id="rel8#role15" name="UserToAvalia&#231;&#227;o" maxCard="1"/>
-    <RelationshipRole2 id="rel8#role16" name="Avalia&#231;&#227;oToUser" maxCard="N"/>
+  <Relationship id="rel10" name="Miniatura_Fotos" sourceEntity="ent3" targetEntity="ent9" gr:bendpoints="2,230,-125,0" db:database="db2" db:table="fotos_miniatura">
+    <RelationshipRole1 id="rel10#role19" name="MiniaturaToFotos" maxCard="N">
+      <db:JoinColumn attribute="ent3#att6" name="miniatura_oid_mini"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel10#role20" name="FotosToMiniatura" maxCard="1">
+      <db:JoinColumn attribute="ent9#att23" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Relationship id="rel9" name="Miniatura_Avalia&#231;&#227;o" sourceEntity="ent3" targetEntity="ent8" gr:bendpoints="253,-81,0,61">
-    <RelationshipRole1 id="rel9#role17" name="MiniaturaToAvalia&#231;&#227;o" maxCard="1"/>
-    <RelationshipRole2 id="rel9#role18" name="Avalia&#231;&#227;oToMiniatura" maxCard="N"/>
-  </Relationship>
-  <Entity gr:x="460" gr:y="560" id="ent9" name="Fotos_Miniatura" duration="persistent" attributeOrder="ent9#att23 ent9#att24">
-    <Attribute id="ent9#att23" key="true" name="oid" type="integer"/>
-    <Attribute id="ent9#att24" name="foto" type="blob"/>
+  <Entity gr:x="160" gr:y="250" id="ent10" name="Fotos_Modelo" duration="persistent" attributeOrder="ent10#att17 ent10#att21" db:database="db2" db:table="fotos_modelo">
+    <Attribute id="ent10#att17" key="true" name="oid" type="integer" db:column="oid"/>
+    <Attribute id="ent10#att21" name="foto" type="blob" db:column="foto"/>
   </Entity>
-  <Relationship id="rel10" name="Miniatura_Fotos" sourceEntity="ent3" targetEntity="ent9" gr:bendpoints="2,230,-125,0">
-    <RelationshipRole1 id="rel10#role19" name="MiniaturaToFotos" maxCard="1"/>
-    <RelationshipRole2 id="rel10#role20" name="FotosToMiniatura" maxCard="N"/>
+  <Relationship id="rel11" name="Fotos_Modelo_Modelo" sourceEntity="ent10" targetEntity="ent2" gr:bendpoints="-94,32,23,-103" db:database="db2" db:table="modelo">
+    <RelationshipRole1 id="rel11#role21" name="Fotos_ModeloToModelo" maxCard="1">
+      <db:JoinColumn attribute="ent10#att17" name="fotos_modelo_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel11#role22" name="ModeloToFotos_Modelo" maxCard="1">
+      <db:JoinColumn attribute="ent2#att3" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="160" gr:y="250" id="ent10" name="Fotos_Modelo" duration="persistent" attributeOrder="ent10#att17 ent10#att21">
-    <Attribute id="ent10#att17" key="true" name="oid" type="integer"/>
-    <Attribute id="ent10#att21" name="foto" type="blob"/>
+  <db:Database id="db2" name="MySql" type="MySQL" url="jdbc:mysql://localhost:3306/mwdb" username="andre" password="TEFyb2NoZTU1NQ==" cryptedPassword="true"/>
+  <Entity id="ent11" name="Avaliacao" duration="persistent" gr:x="560" gr:y="180" attributeOrder="ent11#att29 ent11#att30 ent11#att31" db:database="db2" db:table="avaliacao">
+    <Attribute id="ent11#att29" name="avaliacao" type="integer" key="false" db:column="avaliacao"/>
+    <Attribute id="ent11#att30" name="userOidUser" type="integer" key="true" db:column="useroiduser"/>
+    <Attribute id="ent11#att31" name="miniaturaOidMini" type="integer" key="true" db:column="miniaturaoidmini"/>
   </Entity>
-  <Relationship id="rel11" name="Fotos_Modelo_Modelo" sourceEntity="ent10" targetEntity="ent2" gr:bendpoints="-94,32,23,-103">
-    <RelationshipRole1 id="rel11#role21" name="Fotos_ModeloToModelo" maxCard="1"/>
-    <RelationshipRole2 id="rel11#role22" name="ModeloToFotos_Modelo" maxCard="1"/>
+  <Relationship id="rel12" name="User_Avaliacao" sourceEntity="User" targetEntity="ent11" gr:bendpoints="105,83,-411,-65;463,79,-53,-69" db:database="db2" db:table="avaliacao">
+    <RelationshipRole1 id="rel12#role23" name="UserToAvaliacao" maxCard="N">
+      <db:JoinColumn attribute="userOID" name="user_oid_user"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel12#role24" name="AvaliacaoToUser" maxCard="1">
+      <db:JoinColumn attribute="ent11#att30" name="useroiduser"/>
+      <db:JoinColumn attribute="ent11#att31" name="miniaturaoidmini"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel13" name="Miniatura_Avaliacao" sourceEntity="ent3" targetEntity="ent11" db:database="db2" db:table="avaliacao">
+    <RelationshipRole1 id="rel13#role25" name="MiniaturaToAvaliacao" maxCard="N">
+      <db:JoinColumn attribute="ent3#att6" name="miniatura_oid_mini"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel13#role26" name="AvaliacaoToMiniatura" maxCard="1">
+      <db:JoinColumn attribute="ent11#att30" name="useroiduser"/>
+      <db:JoinColumn attribute="ent11#att31" name="miniaturaoidmini"/>
+    </RelationshipRole2>
+  </Relationship>
+  <Relationship id="rel14" name="Tipo_Marca" sourceEntity="ent4" targetEntity="ent1" db:database="db2" db:table="marca">
+    <RelationshipRole1 id="rel14#role27" name="TipoToMarca" maxCard="N">
+      <db:JoinColumn attribute="ent4#att9" name="tipo_oid"/>
+    </RelationshipRole1>
+    <RelationshipRole2 id="rel14#role28" name="MarcaToTipo" maxCard="1">
+      <db:JoinColumn attribute="ent1#att1" name="oid"/>
+    </RelationshipRole2>
   </Relationship>
 </DataModel>
