@@ -1,0 +1,57 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area4#page3" name="Nova Marca" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="110" gr:y="10" id="sv2#area4#page3#enu1" name="Nova Marca" linkOrder="sv2#area4#page3#enu1#ln7">
+      <Link id="sv2#area4#page3#enu1#ln7" name="Guardar" to="sv2#cru1" type="normal" validate="true">
+        <LinkParameter id="sv2#area4#page3#enu1#ln7#par2" name="Logo_Logo [file name]" source="sv2#area4#page3#enu1#fld3" target="sv2#cru1.ent1#att18_name"/>
+        <LinkParameter id="sv2#area4#page3#enu1#ln7#par3" name="Nome_NomeMarca" source="sv2#area4#page3#enu1#fld2" target="sv2#cru1.ent1#att2"/>
+        <LinkParameter id="sv2#area4#page3#enu1#ln7#par4" name="Tipo_Tipo.oid(MarcaToTipo)" source="sv2#area4#page3#enu1#sfld2" target="sv2#cru1.rel14#role28.ent4#att9"/>
+        <LinkParameter id="sv2#area4#page3#enu1#ln7#par14" name="Logo_Logo" source="sv2#area4#page3#enu1#fld3" target="sv2#cru1.ent1#att18"/>
+      </Link>
+      <Field id="sv2#area4#page3#enu1#fld2" name="NomeMarca" type="string" modifiable="true"/>
+      <Field id="sv2#area4#page3#enu1#fld3" name="Logo" type="blob" modifiable="true"/>
+      <SelectionField id="sv2#area4#page3#enu1#sfld2" name="Tipo" type="string"/>
+    </EntryUnit>
+    <SelectorUnit id="sv2#area4#page3#seu2" name="Tipos" gr:x="0" gr:y="0" entity="ent4" distinctAttributes="ent4#att10">
+      <SortAttribute attribute="ent4#att10" order="ascending"/>
+      <Link id="sv2#area4#page3#seu2#ln10" name="Tipos Data Passing" to="sv2#area4#page3#enu1" type="transport" validate="true">
+        <LinkParameter id="sv2#area4#page3#seu2#ln10#par9" name="Descricao_Tipo [label]" source="ent4#att10Array" target="sv2#area4#page3#enu1#sfld2_label"/>
+        <LinkParameter id="sv2#area4#page3#seu2#ln10#par23" name="oid_Tipo [output]" source="ent4#att9Array" target="sv2#area4#page3#enu1#sfld2_output"/>
+      </Link>
+    </SelectorUnit>
+    <DataUnit gr:x="115" gr:y="118" id="sv2#area4#page3#dau4" name="Nova Marca" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att18">
+      <Selector id="sv2#area4#page3#dau4#su3" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area4#page3#dau4#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page3#enu1">
+          <layout:Link link="sv2#area4#page3#enu1#ln7"/>
+          <layout:Field field="sv2#area4#page3#enu1#fld2"/>
+          <layout:Field field="sv2#area4#page3#enu1#fld3"/>
+          <layout:Field field="sv2#area4#page3#enu1#sfld2"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page3#dau4">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att18"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

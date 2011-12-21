@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="372" gr:y="642" id="sv2#area5#page21" name="Novo Modelo 2">
+  <ContentUnits>
+    <MultiEntryUnit gr:x="0" gr:y="0" id="sv2#area5#page21#meu2" name="FotosModelo" minLength="1" linkOrder="sv2#area5#page21#meu2#ln39">
+      <Field id="sv2#area5#page21#meu2#fld32" name="foto" type="blob" modifiable="true"/>
+      <SelectionField id="sv2#area5#page21#meu2#sfld9" name="Modelo" type="string"/>
+      <Link id="sv2#area5#page21#meu2#ln39" name="Link39" to="sv2#area5#cru7" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page21#meu2#ln39#par66" name="foto_foto" source="sv2#area5#page21#meu2#fld32" target="sv2#area5#cru7.ent10#att21"/>
+        <LinkParameter id="sv2#area5#page21#meu2#ln39#par67" name="Modelo_Modelo.oid(Fotos_ModeloToModelo)" source="sv2#area5#page21#meu2#sfld9" target="sv2#area5#cru7.rel11#role21.ent2#att3"/>
+      </Link>
+    </MultiEntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page21#meu2">
+          <layout:Field field="sv2#area5#page21#meu2#fld32"/>
+          <layout:Field field="sv2#area5#page21#meu2#sfld9"/>
+          <layout:Link link="sv2#area5#page21#meu2#ln39"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

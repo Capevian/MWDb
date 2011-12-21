@@ -1,0 +1,40 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="296" gr:y="252" id="sv2#area5#page10" name="Upload Imagens">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#area5#page10#enu4" name="Imagens" linkOrder="sv2#area5#page10#enu4#ln13">
+      <Field id="sv2#area5#page10#enu4#fld1" name="Imagens" type="blob" modifiable="true" contentType="image"/>
+      <Link id="sv2#area5#page10#enu4#ln13" name="Link13" to="sv2#area5#cru3" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page10#enu4#ln13#par15" name="Imagens_foto [file name]" source="sv2#area5#page10#enu4#fld1" target="sv2#area5#cru3.ent10#att21_name"/>
+      </Link>
+    </EntryUnit>
+    <IndexUnit gr:x="84" gr:y="4" id="sv2#area5#page10#inu2" name="Imagens" entity="ent10" displayAttributes="ent10#att17 ent10#att21">
+      <SortAttribute attribute="ent10#att17" order="ascending"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page10#enu4">
+          <layout:Field field="sv2#area5#page10#enu4#fld1"/>
+          <layout:Link link="sv2#area5#page10#enu4#ln13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page10#inu2">
+          <layout:Attribute attribute="ent10#att17"/>
+          <layout:Attribute attribute="ent10#att21"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -2,11 +2,9 @@
 
 <DBMetaData driverMajorVersion="5" driverMinorVersion="1" driverVersion="mysql-connector-java-5.1.18 ( Revision: tonci.grgin@oracle.com-20110930151701-jfj14ddfq48ifkfq )" productVersion="5.5.17" identifierQuoteString="`" transactionLevel="Repeatable read" driverName="MySQL-AB JDBC Driver" productName="MySQL">
   <Table schema="" ignoreIndexes="false" name="avaliacao" type="TABLE" refreshed="true">
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_oid" primaryKey="true" notNull="true"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="mini_oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="avaliacao" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="useroiduser" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="miniaturaoidmini" primaryKey="true" notNull="true"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_oid_user" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="miniatura_oid_mini" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="comentario" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
@@ -14,6 +12,7 @@
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="texto" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="miniatura_oid_mini" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="user_oid_user" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="-7" indexed="unknown" autoIncrement="false" type="BIT" size="1" decimalDigits="0" name="publicado" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="construtor" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
@@ -33,6 +32,7 @@
   <Table schema="" ignoreIndexes="false" name="fotos_modelo" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="foto" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="modelo_oid" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="group" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
@@ -59,10 +59,9 @@
   <Table schema="" ignoreIndexes="false" name="modelo" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="nomemodelo" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="DATE" size="10" decimalDigits="0" name="anolancamento" primaryKey="false" notNull="false"/>
+    <Column sqlTypeId="91" indexed="unknown" autoIncrement="false" type="YEAR" size="0" decimalDigits="0" name="anolancamento" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="12" indexed="unknown" autoIncrement="false" type="VARCHAR" size="255" decimalDigits="0" name="website" primaryKey="false" notNull="false"/>
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="marca_oid" primaryKey="false" notNull="false"/>
-    <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="fotos_modelo_oid" primaryKey="false" notNull="false"/>
   </Table>
   <Table schema="" ignoreIndexes="false" name="module" type="TABLE" refreshed="true">
     <Column sqlTypeId="4" indexed="unknown" autoIncrement="false" type="INT" size="10" decimalDigits="0" name="oid" primaryKey="true" notNull="true"/>

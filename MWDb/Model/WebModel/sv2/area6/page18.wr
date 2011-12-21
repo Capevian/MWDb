@@ -1,0 +1,49 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="6" gr:y="606" id="sv2#area6#page18" name="Apagar Miniaturas" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area6#page18#pwu8" name="Miniaturas" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att6 rel4#role8.ent5#att12 rel5#role10.ent6#att14 rel2#role4.rel1#role2.ent1#att2 rel2#role4.ent2#att4 rel2#role4.ent2#att5" sortHistorySize="1" blockFactor="10" blockWindow="10" linkOrder="sv2#area6#page18#pwu8#ln32">
+      <SortAttribute attribute="rel4#role8.ent5#att12" order="ascending"/>
+      <SortAttribute attribute="rel5#role10.ent6#att14" order="ascending"/>
+      <SortAttribute attribute="rel2#role4.rel1#role2.ent1#att2" order="ascending"/>
+      <SortAttribute attribute="rel2#role4.ent2#att4" order="ascending"/>
+      <SortAttribute attribute="rel2#role4.ent2#att5" order="ascending"/>
+      <Link id="sv2#area6#page18#pwu8#ln32" name="Apagar" to="sv2#area6#dlu4" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area6#page18#pwu8">
+          <layout:Attribute attribute="ent3#att6"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att12"/>
+          <layout:Attribute attribute="rel5#role10.ent6#att14"/>
+          <layout:Attribute attribute="rel2#role4.rel1#role2.ent1#att2"/>
+          <layout:Attribute attribute="rel2#role4.ent2#att4"/>
+          <layout:Attribute attribute="rel2#role4.ent2#att5"/>
+          <layout:Link link="sv2#area6#page18#pwu8#ln32"/>
+          <layout:Link link="sv2#area6#page18#pwu8rel4#role8$ent5#att12"/>
+          <layout:Link link="sv2#area6#page18#pwu8rel5#role10$ent6#att14"/>
+          <layout:Link link="sv2#area6#page18#pwu8rel2#role4$rel1#role2$ent1#att2"/>
+          <layout:Link link="sv2#area6#page18#pwu8rel2#role4$ent2#att4"/>
+          <layout:Link link="sv2#area6#page18#pwu8rel2#role4$ent2#att5"/>
+          <layout:Link link="sv2#area6#page18#pwu8First"/>
+          <layout:Link link="sv2#area6#page18#pwu8Previous"/>
+          <layout:Link link="sv2#area6#page18#pwu8Block"/>
+          <layout:Link link="sv2#area6#page18#pwu8Next"/>
+          <layout:Link link="sv2#area6#page18#pwu8Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

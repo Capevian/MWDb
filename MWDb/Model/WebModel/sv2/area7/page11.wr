@@ -1,0 +1,39 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="30" gr:y="470" id="sv2#area7#page11" name="Apagar Construtor" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area7#page11#pwu6" name="Construtores" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att14 ent6#att15 ent6#att16" sortHistorySize="1" blockFactor="10" blockWindow="10" linkOrder="sv2#area7#page11#pwu6#ln24">
+      <SortAttribute attribute="ent6#att14" order="ascending"/>
+      <DefaultSortAttribute attribute="ent6#att14" order="ascending"/>
+      <Link id="sv2#area7#page11#pwu6#ln24" name="Apagar" to="sv2#area7#dlu3" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area7#page11#pwu6">
+          <layout:Attribute attribute="ent6#att14"/>
+          <layout:Attribute attribute="ent6#att15"/>
+          <layout:Attribute attribute="ent6#att16"/>
+          <layout:Link link="sv2#area7#page11#pwu6#ln24"/>
+          <layout:Link link="sv2#area7#page11#pwu6ent6#att14"/>
+          <layout:Link link="sv2#area7#page11#pwu6First"/>
+          <layout:Link link="sv2#area7#page11#pwu6Previous"/>
+          <layout:Link link="sv2#area7#page11#pwu6Block"/>
+          <layout:Link link="sv2#area7#page11#pwu6Next"/>
+          <layout:Link link="sv2#area7#page11#pwu6Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

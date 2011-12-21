@@ -1,0 +1,14 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Admin View" protected="false" landmarks="sv2#area4 sv2#area5 sv2#area6 sv2#area7 sv2#area8" homePage="sv2#area4#page3">
+  <OperationUnits>
+    <CreateUnit gr:x="400" gr:y="110" id="sv2#cru1" name="NovaMarca" entity="ent1">
+      <KOLink id="sv2#cru1#kln1" name="KOLink1" to="sv2#area4#page3" automaticCoupling="true" gr:bendpoints="-95,14,108,15"/>
+      <OKLink id="sv2#cru1#oln1" name="Marca Criada" to="sv2#area4#page3#dau4" gr:bendpoints="-1,131,207,0">
+        <LinkParameter id="sv2#cru1#oln1#par24" name="oid_KeyCondition3 [oid]" source="ent1#att1Array" target="sv2#area4#page3#dau4#su3#kcond3.ent1#att1"/>
+      </OKLink>
+    </CreateUnit>
+    <CreateUnit gr:x="360" gr:y="840" id="sv2#cru4" name="Novo Construtor" entity="ent6">
+      <OKLink id="sv2#cru4#oln9" name="OKLink9" to="sv2#area7#page15#dau7" automaticCoupling="true"/>
+      <KOLink id="sv2#cru4#kln4" name="KOLink4" to="sv2#area7#page15" automaticCoupling="true"/>
+    </CreateUnit>
+  </OperationUnits>
+</SiteView>

@@ -1,0 +1,70 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="14" gr:y="0" id="sv2#area5#page9" name="Novo Modelo" landmark="true">
+  <ContentUnits>
+    <EntryUnit gr:x="140" gr:y="0" id="sv2#area5#page9#enu3" name="Novo Modelo" linkOrder="sv2#area5#page9#enu3#ln15">
+      <Field id="sv2#area5#page9#enu3#fld7" name="NomeModelo" type="string" modifiable="true"/>
+      <Field id="sv2#area5#page9#enu3#fld8" name="AnoLancamento" type="date" modifiable="true"/>
+      <Field id="sv2#area5#page9#enu3#fld12" name="Website" type="string" modifiable="true"/>
+      <SelectionField id="sv2#area5#page9#enu3#sfld6" name="Marca" type="string"/>
+      <Link id="sv2#area5#page9#enu3#ln15" name="Link15" to="sv2#area5#cru2" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page9#enu3#ln15#par32" name="AnoLancamento_AnoLancamento" source="sv2#area5#page9#enu3#fld8" target="sv2#area5#cru2.ent2#att5"/>
+        <LinkParameter id="sv2#area5#page9#enu3#ln15#par33" name="Marca_Marca.oid(ModeloToMarca)" source="sv2#area5#page9#enu3#sfld6" target="sv2#area5#cru2.rel1#role2.ent1#att1"/>
+        <LinkParameter id="sv2#area5#page9#enu3#ln15#par34" name="NomeModelo_NomeModelo" source="sv2#area5#page9#enu3#fld7" target="sv2#area5#cru2.ent2#att4"/>
+        <LinkParameter id="sv2#area5#page9#enu3#ln15#par35" name="Website_Website" source="sv2#area5#page9#enu3#fld12" target="sv2#area5#cru2.ent2#att8"/>
+      </Link>
+      <MultiSelectionField id="sv2#area5#page9#enu3#msfld4" name="Fotos_Modelo" type="string"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="0" gr:y="0" id="sv2#area5#page9#seu3" name="Marcas" entity="ent1" distinctAttributes="ent1#att2">
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <Link id="sv2#area5#page9#seu3#ln16" name="Link16" to="sv2#area5#page9#enu3" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page9#seu3#ln16#par36" name="NomeMarca_Marca [label]" source="ent1#att2Array" target="sv2#area5#page9#enu3#sfld6_label"/>
+        <LinkParameter id="sv2#area5#page9#seu3#ln16#par37" name="oid_Marca [output]" source="ent1#att1Array" target="sv2#area5#page9#enu3#sfld6_output"/>
+      </Link>
+    </SelectorUnit>
+    <DataUnit gr:x="136" gr:y="156" id="sv2#area5#page9#dau5" name="Novo Modelo" entity="ent2" displayAll="true">
+      <Selector id="sv2#area5#page9#dau5#su11" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#page9#dau5#su11#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <EntryUnit id="sv2#area5#page9#enu6" name="Form" gr:x="146" gr:y="76" linkOrder="sv2#area5#page9#enu6#ln14">
+      <Field id="sv2#area5#page9#enu6#fld5" name="Field4" ajaxUploadEnabled="true" ajaxUploadPage="sv2#area5#page10" ajaxUploadPageWidth="400" ajaxUploadPageHeight="400" type="string" modifiable="true"/>
+      <Link id="sv2#area5#page9#enu6#ln14" name="Link14" to="sv2#area5#cru2" automaticCoupling="true" type="normal" validate="true"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page9#enu3">
+          <layout:Link link="sv2#area5#page9#enu3#ln15"/>
+          <layout:Field field="sv2#area5#page9#enu3#fld7"/>
+          <layout:Field field="sv2#area5#page9#enu3#fld8"/>
+          <layout:Field field="sv2#area5#page9#enu3#fld12"/>
+          <layout:Field field="sv2#area5#page9#enu3#sfld6"/>
+          <layout:Field field="sv2#area5#page9#enu3#msfld4"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page9#dau5">
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att8"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page9#enu6">
+          <layout:Field field="sv2#area5#page9#enu6#fld5"/>
+          <layout:Link link="sv2#area5#page9#enu6#ln14"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

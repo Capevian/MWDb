@@ -1,0 +1,92 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="432" id="sv2#area5#page12" name="Editar Modelo" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="16" gr:y="0" id="sv2#area5#page12#pwu3" name="Modelo" sortable="true" checkable="false" useCountQuery="false" entity="ent2" blockFactor="10" blockWindow="10" displayAttributes="ent2#att4 ent2#att5" linkOrder="sv2#area5#page12#pwu3#ln17" sortHistorySize="1">
+      <SortAttribute attribute="ent2#att4" order="ascending"/>
+      <Link id="sv2#area5#page12#pwu3#ln17" name="Editar" to="sv2#area5#page12#enu7" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page12#pwu3#ln17#par30" name="AnoLancamento_AnoLancamento" source="data[].ent2#att5" target="sv2#area5#page12#enu7#fld16_slot"/>
+        <LinkParameter id="sv2#area5#page12#pwu3#ln17#par31" name="NomeModelo_NomeModelo" source="data[].ent2#att4" target="sv2#area5#page12#enu7#fld15_slot"/>
+        <LinkParameter id="sv2#area5#page12#pwu3#ln17#par38" name="Website_Website" source="data[].ent2#att8" target="sv2#area5#page12#enu7#fld17_slot"/>
+        <LinkParameter id="sv2#area5#page12#pwu3#ln17#par42" name="oid_oid" source="data[].ent2#att3" target="sv2#area5#page12#enu7#fld18_slot"/>
+      </Link>
+      <DefaultSortAttribute attribute="ent2#att4" order="ascending"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="140" gr:y="4" id="sv2#area5#page12#enu7" name="Editar Modelo" linkOrder="sv2#area5#page12#enu7#ln19">
+      <Link id="sv2#area5#page12#enu7#ln19" name="Guardar" to="sv2#area5#mfu1" type="normal" validate="true">
+        <LinkParameter id="sv2#area5#page12#enu7#ln19#par26" name="AnoLancamento_AnoLancamento" source="sv2#area5#page12#enu7#fld16" target="sv2#area5#mfu1.ent2#att5"/>
+        <LinkParameter id="sv2#area5#page12#enu7#ln19#par27" name="Marca_Marca.oid(ModeloToMarca)" source="sv2#area5#page12#enu7#sfld3" target="sv2#area5#mfu1.rel1#role2.ent1#att1"/>
+        <LinkParameter id="sv2#area5#page12#enu7#ln19#par28" name="NomeModelo_NomeModelo" source="sv2#area5#page12#enu7#fld15" target="sv2#area5#mfu1.ent2#att4"/>
+        <LinkParameter id="sv2#area5#page12#enu7#ln19#par29" name="Website_Website" source="sv2#area5#page12#enu7#fld17" target="sv2#area5#mfu1.ent2#att8"/>
+        <LinkParameter id="sv2#area5#page12#enu7#ln19#par41" name="oid_KeyCondition11 [oid]" source="sv2#area5#page12#enu7#fld18" target="sv2#area5#mfu1#su16#kcond11.ent2#att3"/>
+      </Link>
+      <Field id="sv2#area5#page12#enu7#fld15" name="NomeModelo" type="string" modifiable="true" preloaded="true"/>
+      <Field id="sv2#area5#page12#enu7#fld16" name="AnoLancamento" type="date" modifiable="true" preloaded="true"/>
+      <Field id="sv2#area5#page12#enu7#fld17" name="Website" type="string" modifiable="true" preloaded="true"/>
+      <MultiSelectionField id="sv2#area5#page12#enu7#msfld3" name="Fotos_Modelo" type="string"/>
+      <SelectionField id="sv2#area5#page12#enu7#sfld3" name="Marca" type="string"/>
+      <Field id="sv2#area5#page12#enu7#fld18" name="oid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
+    </EntryUnit>
+    <SelectorUnit gr:x="90" gr:y="114" id="sv2#area5#page12#seu4" name="Marcas" entity="ent1">
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <Link id="sv2#area5#page12#seu4#ln18" name="Link18" to="sv2#area5#page12#enu7" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page12#seu4#ln18#par39" name="NomeMarca_Marca [label]" source="ent1#att2Array" target="sv2#area5#page12#enu7#sfld3_label"/>
+        <LinkParameter id="sv2#area5#page12#seu4#ln18#par40" name="oid_Marca [output]" source="ent1#att1Array" target="sv2#area5#page12#enu7#sfld3_output"/>
+      </Link>
+    </SelectorUnit>
+    <DataUnit gr:x="170" gr:y="124" id="sv2#area5#page12#dau6" name="Modelo Alterado" entity="ent2" displayAttributes="ent2#att4 ent2#att5 ent2#att8">
+      <Selector id="sv2#area5#page12#dau6#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#page12#dau6#su17#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+    <SelectorUnit gr:x="0" gr:y="114" id="sv2#area5#page12#seu5" name="Fotos" entity="ent10">
+      <SortAttribute attribute="ent10#att17" order="ascending"/>
+      <Link id="sv2#area5#page12#seu5#ln20" name="Link20" to="sv2#area5#page12#enu7" type="transport" validate="true">
+        <LinkParameter id="sv2#area5#page12#seu5#ln20#par43" name="foto_Fotos_Modelo [label]" source="ent10#att21Array" target="sv2#area5#page12#enu7#msfld3_label"/>
+        <LinkParameter id="sv2#area5#page12#seu5#ln20#par44" name="oid_Fotos_Modelo [output]" source="ent10#att17Array" target="sv2#area5#page12#enu7#msfld3_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page12#pwu3">
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Link link="sv2#area5#page12#pwu3#ln17"/>
+          <layout:Link link="sv2#area5#page12#pwu3ent2#att4"/>
+          <layout:Link link="sv2#area5#page12#pwu3First"/>
+          <layout:Link link="sv2#area5#page12#pwu3Previous"/>
+          <layout:Link link="sv2#area5#page12#pwu3Block"/>
+          <layout:Link link="sv2#area5#page12#pwu3Next"/>
+          <layout:Link link="sv2#area5#page12#pwu3Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page12#enu7">
+          <layout:Link link="sv2#area5#page12#enu7#ln19"/>
+          <layout:Field field="sv2#area5#page12#enu7#fld15"/>
+          <layout:Field field="sv2#area5#page12#enu7#fld16"/>
+          <layout:Field field="sv2#area5#page12#enu7#fld17"/>
+          <layout:Field field="sv2#area5#page12#enu7#sfld3"/>
+          <layout:Field field="sv2#area5#page12#enu7#msfld3"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area5#page12#dau6">
+          <layout:Attribute attribute="ent2#att4"/>
+          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att8"/>
+        </layout:Unit>
+      </layout:Cell>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

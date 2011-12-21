@@ -1,23 +1,33 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page4" name="Cat&#225;logoMarcas" landmark="true" gr:x="0" gr:y="0">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page4" name="Cat&#225;logoMarcas" landmark="false" gr:x="174" gr:y="4">
   <ContentUnits>
-    <IndexUnit id="sv1#area2#page4#inu3" name="Marcas" gr:x="0" gr:y="0" entity="ent1" displayAttributes="ent1#att2 ent1#att18" linkOrder="sv1#area2#page4#inu3#ln4">
+    <IndexUnit id="sv1#area2#page4#inu3" name="Marcas" gr:x="10" gr:y="130" entity="ent1" displayAttributes="ent1#att2 ent1#att18" linkOrder="sv1#area2#page4#inu3#ln28">
       <SortAttribute attribute="ent1#att2" order="descending"/>
       <Selector id="sv1#area2#page4#inu3#su4" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#area2#page4#inu3#su4#acond4" name="selectedTipo" predicate="eq" booleanOperator="or" implied="false" attributes="rel14#role28.ent4#att9"/>
+        <RelationshipRoleCondition id="sv1#area2#page4#inu3#su4#rcond2" name="TipoToMarcas" predicate="in" implied="false" role="rel14#role27"/>
       </Selector>
-      <Link id="sv1#area2#page4#inu3#ln4" name="Link4" to="sv1#area2#page5#inu4" type="normal" validate="true">
-        <LinkParameter id="sv1#area2#page4#inu3#ln4#par6" name="oid_selectedModelo" source="data[].ent1#att1" target="sv1#area2#page5#inu4#su5#acond5"/>
-      </Link>
+      <Link id="sv1#area2#page4#inu3#ln28" name="Modelos" to="sv1#area2#page5#dau11" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>
+    <DataUnit gr:x="0" gr:y="0" id="sv1#area2#page4#dau12" name="Tipo" entity="ent4" displayAttributes="ent4#att10" linkOrder="sv1#area2#page4#dau12#ln3">
+      <Selector id="sv1#area2#page4#dau12#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area2#page4#dau12#su28#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv1#area2#page4#dau12#ln46" name="Link46" to="sv1#area2#page4#inu3" automaticCoupling="true" type="transport" validate="true"/>
+      <Link id="sv1#area2#page4#dau12#ln3" name="Voltar Atr&#225;s" to="sv1#area2#page20" automaticCoupling="true" type="normal" validate="true"/>
+    </DataUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area2#page4#dau12">
+          <layout:Attribute attribute="ent4#att10"/>
+          <layout:Link link="sv1#area2#page4#dau12#ln3"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell>
         <layout:Unit unitId="sv1#area2#page4#inu3">
           <layout:Attribute attribute="ent1#att2"/>
           <layout:Attribute attribute="ent1#att18"/>
-          <layout:Link link="sv1#area2#page4#inu3#ln4"/>
+          <layout:Link link="sv1#area2#page4#inu3#ln28"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

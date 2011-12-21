@@ -1,19 +1,24 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="12" gr:y="172" id="sv1#area2#page6" name="P&#225;gina do Modelo">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="160" gr:y="310" id="sv1#area2#page6" name="P&#225;gina do Modelo">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv1#area2#page6#dau1" name="Modelo" entity="ent2" displayAttributes="ent2#att4 ent2#att5 ent2#att8 rel11#role22.ent10#att21">
+    <DataUnit gr:x="0" gr:y="0" id="sv1#area2#page6#dau1" name="Modelo" entity="ent2" displayAttributes="ent2#att4 ent2#att5 ent2#att8 rel11#role22.ent10#att21" linkOrder="sv1#area2#page6#dau1#ln37">
       <Selector id="sv1#area2#page6#dau1#su6" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area2#page6#dau1#su6#acond6" name="selectedModelo" predicate="eq" booleanOperator="or" implied="false" attributes="ent2#att3"/>
       </Selector>
-      <Link id="sv1#area2#page6#dau1#ln6" name="Link6" to="sv1#area2#page6#inu5" type="transport" validate="true">
-        <LinkParameter id="sv1#area2#page6#dau1#ln6#par8" name="oid_AttCondition7" source="data.ent2#att3" target="sv1#area2#page6#inu5#su8#acond7"/>
+      <Link id="sv1#area2#page6#dau1#ln6" name="Miniaturas" to="sv1#area2#page6#inu5" type="transport" validate="true">
+        <LinkParameter id="sv1#area2#page6#dau1#ln6#par6" name="oid_MiniToModelo [oid]" source="data.ent2#att3" target="sv1#area2#page6#inu5#su8#rcond5.ent2#att3"/>
+      </Link>
+      <Link id="sv1#area2#page6#dau1#ln37" name="Voltar Atr&#225;s" to="sv1#area2#page5#dau11" type="normal" validate="true">
+        <LinkParameter id="sv1#area2#page6#dau1#ln37#par8" name="ModeloToMarca.oid_KeyCondition19 [oid]" source="data.rel1#role2_ent1#att1" target="sv1#area2#page5#dau11#su26#kcond19.ent1#att1"/>
       </Link>
     </DataUnit>
     <IndexUnit gr:x="140" gr:y="0" id="sv1#area2#page6#inu5" name="Miniaturas" entity="ent3" displayAttributes="rel5#role10.ent6#att14 rel4#role8.ent5#att12" linkOrder="sv1#area2#page6#inu5#ln1">
       <Selector id="sv1#area2#page6#inu5#su8" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#area2#page6#inu5#su8#acond7" name="AttCondition7" predicate="eq" booleanOperator="or" implied="false" attributes="rel2#role4.ent2#att3"/>
+        <RelationshipRoleCondition id="sv1#area2#page6#inu5#su8#rcond5" name="MiniToModelo" predicate="in" implied="false" role="rel2#role3"/>
       </Selector>
       <SortAttribute attribute="rel4#role8.ent5#att12" order="ascending"/>
-      <Link id="sv1#area2#page6#inu5#ln1" name="Link1" to="sv1#area3#page2#dau2" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv1#area2#page6#inu5#ln1" name="Detalhes" to="sv1#area3#page2#dau2" type="normal" validate="true">
+        <LinkParameter id="sv1#area2#page6#inu5#ln1#par86" name="oid_mini_KeyCondition1 [oid_mini]" source="data[].ent3#att6" target="sv1#area3#page2#dau2#su1#kcond1.ent3#att6"/>
+      </Link>
     </IndexUnit>
   </ContentUnits>
   <layout:Grid>
@@ -24,6 +29,7 @@
           <layout:Attribute attribute="ent2#att5"/>
           <layout:Attribute attribute="ent2#att8"/>
           <layout:Attribute attribute="rel11#role22.ent10#att21"/>
+          <layout:Link link="sv1#area2#page6#dau1#ln37"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell>

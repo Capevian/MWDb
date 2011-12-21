@@ -1,12 +1,14 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area3#page2" name="Miniatura">
   <ContentUnits>
-    <DataUnit gr:x="10" gr:y="0" id="sv1#area3#page2#dau2" name="Miniatura" entity="ent3" displayAttributes="ent3#att7 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel2#role4.ent2#att8 rel4#role8.ent5#att12 rel5#role10.ent6#att14">
+    <DataUnit gr:x="10" gr:y="0" id="sv1#area3#page2#dau2" name="Miniatura" entity="ent3" displayAttributes="ent3#att7 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel2#role4.ent2#att8 rel4#role8.ent5#att12 rel5#role10.ent6#att14 avg(rel8#role16.ent8#att28)">
       <Selector id="sv1#area3#page2#dau2#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area3#page2#dau2#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
-        <AttributesCondition id="sv1#area3#page2#dau2#su1#acond1" name="selectMiniatura" predicate="eq" booleanOperator="or" implied="false"/>
       </Selector>
       <Link id="sv1#area3#page2#dau2#ln2" name="Link2" to="sv1#area3#page2#mdu1" type="transport" validate="true">
         <LinkParameter id="sv1#area3#page2#dau2#ln2#par1" name="oid_mini_fotosMini" source="data.ent3#att6" target="sv1#area3#page2#mdu1#su2#acond2"/>
+      </Link>
+      <Link id="sv1#area3#page2#dau2#ln44" name="Link44" to="sv1#area3#page2#inu7" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#page2#dau2#ln44#par88" name="oid_mini_MiniaturaToComent&#225;rio [oid_mini]" source="data.ent3#att6" target="sv1#area3#page2#inu7#su27#rcond1.ent3#att6"/>
       </Link>
     </DataUnit>
     <MultiDataUnit gr:x="0" gr:y="176" id="sv1#area3#page2#mdu1" name="Fotos_Miniatura" entity="ent9" displayAttributes="ent9#att24">
@@ -15,6 +17,12 @@
         <AttributesCondition id="sv1#area3#page2#mdu1#su2#acond2" name="fotosMini" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role20.ent3#att6"/>
       </Selector>
     </MultiDataUnit>
+    <IndexUnit gr:x="136" gr:y="6" id="sv1#area3#page2#inu7" name="Coment&#225;rios" entity="ent7" displayAttributes="ent7#att20 ent7#att25 rel7#role13.userName">
+      <SortAttribute attribute="ent7#att20" order="ascending"/>
+      <Selector id="sv1#area3#page2#inu7#su27" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv1#area3#page2#inu7#su27#rcond1" name="MiniaturaToComent&#225;rio" predicate="in" implied="false" role="rel6#role12"/>
+      </Selector>
+    </IndexUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
@@ -26,6 +34,7 @@
           <layout:Attribute attribute="rel2#role4.ent2#att8"/>
           <layout:Attribute attribute="rel4#role8.ent5#att12"/>
           <layout:Attribute attribute="rel5#role10.ent6#att14"/>
+          <layout:Attribute attribute="avg(rel8#role16.ent8#att28)"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell>
@@ -33,7 +42,13 @@
           <layout:Attribute attribute="ent9#att24"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area3#page2#inu7">
+          <layout:Attribute attribute="ent7#att20"/>
+          <layout:Attribute attribute="ent7#att25"/>
+          <layout:Attribute attribute="rel7#role13.userName"/>
+        </layout:Unit>
+      </layout:Cell>
     </layout:Row>
     <layout:Row>
       <layout:Cell/>

@@ -1,0 +1,16 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="42" gr:y="42" id="sv2#area4" name="Gest&#227;o de Marcas" landmark="true" defaultPage="sv2#area4#page3" landmarks="sv2#area4#page7 sv2#area4#page3 sv2#area4#page8">
+  <OperationUnits>
+    <ModifyUnit gr:x="360" gr:y="290" id="sv2#area4#mfu2" name="AlteraMarca" entity="ent1">
+      <Selector id="sv2#area4#mfu2#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area4#mfu2#su10#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area4#mfu2#oln2" name="Marca Alterada" to="sv2#area4#page7#dau3" automaticCoupling="true"/>
+    </ModifyUnit>
+    <DeleteUnit gr:x="190" gr:y="570" id="sv2#area4#dlu1" name="Apagar Marcas" entity="ent1">
+      <Selector id="sv2#area4#dlu1#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area4#dlu1#su9#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area4#dlu1#oln3" name="Marca Apagada" to="sv2#area4#page8" automaticCoupling="true" gr:bendpoints="-83,44,104,63"/>
+    </DeleteUnit>
+  </OperationUnits>
+</Area>

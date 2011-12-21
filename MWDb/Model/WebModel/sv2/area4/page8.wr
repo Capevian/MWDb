@@ -1,0 +1,38 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="530" id="sv2#area4#page8" name="Apagar Marca" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area4#page8#pwu2" name="Marcas" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att1 ent1#att2" blockFactor="10" blockWindow="10" sortHistorySize="1" linkOrder="sv2#area4#page8#pwu2#ln8">
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
+      <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
+      <Link id="sv2#area4#page8#pwu2#ln8" name="Apagar" to="sv2#area4#dlu1" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page8#pwu2">
+          <layout:Attribute attribute="ent1#att1"/>
+          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Link link="sv2#area4#page8#pwu2#ln8"/>
+          <layout:Link link="sv2#area4#page8#pwu2ent1#att2"/>
+          <layout:Link link="sv2#area4#page8#pwu2First"/>
+          <layout:Link link="sv2#area4#page8#pwu2Previous"/>
+          <layout:Link link="sv2#area4#page8#pwu2Block"/>
+          <layout:Link link="sv2#area4#page8#pwu2Next"/>
+          <layout:Link link="sv2#area4#page8#pwu2Last"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

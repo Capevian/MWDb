@@ -1,3 +1,7 @@
-<SiteView id="sv1" name="Public View" landmarks="sv1#area1 sv1#area2" homePage="sv1#area1#page1">
-  <OperationUnits/>
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Public View" landmarks="sv1#area1 sv1#area2" homePage="sv1#area1#page1">
+  <OperationUnits>
+    <LoginUnit gr:x="10" gr:y="170" id="sv1#lgu1" name="LoginUnit1">
+      <KOLink id="sv1#lgu1#kln8" name="KOLink8" to="sv1#area1#page1" automaticCoupling="true" gr:bendpoints="-1,-77,-149,-38"/>
+    </LoginUnit>
+  </OperationUnits>
 </SiteView>

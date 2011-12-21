@@ -1,0 +1,25 @@
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="560" gr:y="40" id="sv2#area5" name="Gest&#227;o de Modelos" landmark="true" defaultPage="sv2#area5#page9" landmarks="sv2#area5#page12 sv2#area5#page9 sv2#area5#page13">
+  <OperationUnits>
+    <CreateUnit gr:x="330" gr:y="26" id="sv2#area5#cru2" name="NovoModelo" entity="ent2">
+      <OKLink id="sv2#area5#cru2#oln4" name="Modelo Criado" to="sv2#area5#page9#dau5" automaticCoupling="true" gr:bendpoints="-1,174,161,1"/>
+    </CreateUnit>
+    <CreateUnit gr:x="126" gr:y="322" id="sv2#area5#cru3" name="NovaImagem" entity="ent10">
+      <OKLink id="sv2#area5#cru3#oln5" name="OKLink5" to="sv2#area5#page10#inu2" automaticCoupling="true" gr:bendpoints="162,49,-92,78"/>
+      <KOLink id="sv2#area5#cru3#kln2" name="KOLink2" to="sv2#area5#page10" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="396" gr:y="452" id="sv2#area5#mfu1" name="AlteraModelo" entity="ent2">
+      <Selector id="sv2#area5#mfu1#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#mfu1#su16#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area5#mfu1#oln7" name="OKLink7" to="sv2#area5#page12#dau6" automaticCoupling="true"/>
+      <KOLink id="sv2#area5#mfu1#kln3" name="KOLink3" to="sv2#area5#page12" automaticCoupling="true"/>
+    </ModifyUnit>
+    <DeleteUnit gr:x="212" gr:y="742" id="sv2#area5#dlu2" name="Apagar Modelo" entity="ent2">
+      <Selector id="sv2#area5#dlu2#su18" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#dlu2#su18#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv2#area5#dlu2#oln8" name="OKLink8" to="sv2#area5#page13" automaticCoupling="true"/>
+    </DeleteUnit>
+    <CreateUnit gr:x="516" gr:y="707" id="sv2#area5#cru7" name="Fotos" entity="ent10" bulk="true"/>
+  </OperationUnits>
+</Area>
