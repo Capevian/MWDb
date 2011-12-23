@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="2" gr:y="712" id="sv2#area5#page13" name="Apagar Modelo" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="18" gr:y="632" id="sv2#area5#page13" name="Apagar Modelo" landmark="true">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area5#page13#pwu4" name="Modelo" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att4 ent2#att5 ent2#att3" sortHistorySize="1" blockFactor="10" blockWindow="10" linkOrder="sv2#area5#page13#pwu4#ln21">
       <SortAttribute attribute="ent2#att4" order="ascending"/>

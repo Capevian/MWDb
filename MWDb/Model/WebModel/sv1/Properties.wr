@@ -1,7 +1,11 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Public View" landmarks="sv1#area1 sv1#area2" homePage="sv1#area1#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv1" name="Public View" landmarks="sv1#area1 sv1#area2 sv1#lou1 sv1#lgu1" homePage="sv1#area1#page1">
   <OperationUnits>
-    <LoginUnit gr:x="10" gr:y="170" id="sv1#lgu1" name="LoginUnit1">
-      <KOLink id="sv1#lgu1#kln8" name="KOLink8" to="sv1#area1#page1" automaticCoupling="true" gr:bendpoints="-1,-77,-149,-38"/>
+    <LoginUnit gr:x="0" gr:y="200" id="sv1#lgu1" name="Login" protected="false" landmark="true">
+      <KOLink id="sv1#lgu1#kln8" name="KOLink8" to="sv1#area1#page22" automaticCoupling="true" gr:bendpoints="-1,-77,-149,-38;48,-52,-100,-97"/>
     </LoginUnit>
+    <CreateUnit gr:x="1140" gr:y="200" id="sv1#cru6" name="Coment&#225;rio" entity="ent7" protected="false">
+      <OKLink id="sv1#cru6#oln14" name="OKLink14" to="sv1#area3#page2" automaticCoupling="true"/>
+    </CreateUnit>
+    <LogoutUnit gr:x="-20" gr:y="60" id="sv1#lou1" name="Logout" siteView="sv1" protected="true" landmark="true"/>
   </OperationUnits>
 </SiteView>

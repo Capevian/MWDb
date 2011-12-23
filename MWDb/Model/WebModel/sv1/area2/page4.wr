@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page4" name="Cat&#225;logoMarcas" landmark="false" gr:x="174" gr:y="4">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page4" name="Marcas" landmark="false" gr:x="174" gr:y="4">
   <ContentUnits>
     <IndexUnit id="sv1#area2#page4#inu3" name="Marcas" gr:x="10" gr:y="130" entity="ent1" displayAttributes="ent1#att2 ent1#att18" linkOrder="sv1#area2#page4#inu3#ln28">
       <SortAttribute attribute="ent1#att2" order="descending"/>

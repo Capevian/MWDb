@@ -1,3 +1,18 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="800" gr:y="20" id="sv1#area3" name="Apresenta&#231;&#227;o" landmark="false" defaultPage="sv1#area3#page2">
-  <OperationUnits/>
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="800" gr:y="10" id="sv1#area3" name="Apresenta&#231;&#227;o" landmark="false" defaultPage="sv1#area3#page2">
+  <OperationUnits>
+    <GetUnit gr:x="312" gr:y="276" id="sv1#area3#gtu1" name="GetUser" contextParameters="UserCtxParam" linkOrder="sv1#area3#gtu1#ln57 sv1#area3#gtu1#ln41">
+      <Link id="sv1#area3#gtu1#ln57" name="Link57" to="sv1#cru6" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#gtu1#ln57#par94" name="UserCtxParam.oid_user_User.oid_user(Coment&#225;rioToUser)" source="sv1#area3#gtu1.UserCtxParam" target="sv1#cru6.rel7#role13.userOID"/>
+      </Link>
+      <Link id="sv1#area3#gtu1#ln41" name="Link41" to="sv1#area3#cru8" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#gtu1#ln41#par101" name="UserCtxParam.oid_user_userOid" source="sv1#area3#gtu1.UserCtxParam" target="sv1#area3#cru8.ent8#att26"/>
+      </Link>
+    </GetUnit>
+    <TimeUnit id="sv1#area3#tmu1" name="Get Time" gr:x="472" gr:y="222">
+      <OKLink id="sv1#area3#tmu1#oln16" name="OKLink15" to="sv1#cru6">
+        <LinkParameter id="sv1#area3#tmu1#oln16#par61" name="Current/Input Timestamp_Timestamp" source="currentTime" target="sv1#cru6.ent7#att20"/>
+      </OKLink>
+    </TimeUnit>
+    <CreateUnit gr:x="312" gr:y="372" id="sv1#area3#cru8" name="Avalia&#231;&#227;o" entity="ent8"/>
+  </OperationUnits>
 </Area>

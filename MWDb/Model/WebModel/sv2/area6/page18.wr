@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="6" gr:y="606" id="sv2#area6#page18" name="Apagar Miniaturas" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="16" gr:y="806" id="sv2#area6#page18" name="Apagar Miniaturas" landmark="true">
   <ContentUnits>
     <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area6#page18#pwu8" name="Miniaturas" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="ent3#att6 rel4#role8.ent5#att12 rel5#role10.ent6#att14 rel2#role4.rel1#role2.ent1#att2 rel2#role4.ent2#att4 rel2#role4.ent2#att5" sortHistorySize="1" blockFactor="10" blockWindow="10" linkOrder="sv2#area6#page18#pwu8#ln32">
       <SortAttribute attribute="rel4#role8.ent5#att12" order="ascending"/>

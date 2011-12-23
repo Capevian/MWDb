@@ -1,6 +1,6 @@
 <Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="566" gr:y="956" id="sv2#area6" name="Gest&#227;o de Miniaturas" landmark="true" defaultPage="sv2#area6#page14" landmarks="sv2#area6#page14 sv2#area6#page17 sv2#area6#page18">
   <OperationUnits>
-    <SelectorUnit gr:x="336" gr:y="256" id="sv2#area6#seu11" name="MarcasModelos" entity="ent2">
+    <SelectorUnit gr:x="356" gr:y="266" id="sv2#area6#seu11" name="MarcasModelos" entity="ent2">
       <Selector id="sv2#area6#seu11#su21" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv2#area6#seu11#su21#rcond3" name="RoleCondition3" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>
@@ -8,22 +8,41 @@
       <Link id="sv2#area6#seu11#ln52" name="Link35" to="sv2#area6#page14#enu18" type="transport" validate="true" gr:bendpoints="39,-77,52,67">
         <LinkParameter id="sv2#area6#seu11#ln52#par99" name="NomeModelo_Modelos [label]" source="ent2#att4Array" target="sv2#area6#page14#enu18#sfld18_label"/>
         <LinkParameter id="sv2#area6#seu11#ln52#par100" name="oid_Modelos [output]" source="ent2#att3Array" target="sv2#area6#page14#enu18#sfld18_output"/>
+        <LinkParameter id="sv2#area6#seu11#ln52#par115" name="ModeloToMarca.oid_Marcas - Preselection" source="rel1#role2_ent1#att1Array" target="sv2#area6#page14#enu18#sfld19_presel"/>
       </Link>
     </SelectorUnit>
-    <CreateUnit gr:x="376" gr:y="126" id="sv2#area6#cru5" name="NovaMiniatura" entity="ent3"/>
-    <ModifyUnit gr:x="316" gr:y="406" id="sv2#area6#mfu3" name="Editar Miniatura" entity="ent3">
+    <CreateUnit gr:x="386" gr:y="16" id="sv2#area6#cru5" name="NovaMiniatura" entity="ent3">
+      <OKLink id="sv2#area6#cru5#oln18" name="OKLink18" to="sv2#area6#cru10" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModifyUnit gr:x="376" gr:y="396" id="sv2#area6#mfu3" name="Editar Miniatura" entity="ent3">
       <Selector id="sv2#area6#mfu3#su12" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area6#mfu3#su12#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#area6#mfu3#oln11" name="OKLink11" to="sv2#area6#page17#dau9" automaticCoupling="true"/>
       <KOLink id="sv2#area6#mfu3#kln6" name="KOLink6" to="sv2#area6#page17" automaticCoupling="true"/>
     </ModifyUnit>
-    <DeleteUnit gr:x="216" gr:y="636" id="sv2#area6#dlu4" name="Apaga Miniatura" entity="ent3">
+    <DeleteUnit gr:x="246" gr:y="836" id="sv2#area6#dlu4" name="Apaga Miniatura" entity="ent3">
       <Selector id="sv2#area6#dlu4#su15" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area6#dlu4#su15#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv2#area6#dlu4#oln12" name="OKLink12" to="sv2#area6#page18" automaticCoupling="true" gr:bendpoints="-109,-5,87,32"/>
       <KOLink id="sv2#area6#dlu4#kln7" name="KOLink7" to="sv2#area6#page18" automaticCoupling="true"/>
     </DeleteUnit>
+    <CreateUnit gr:x="396" gr:y="146" id="sv2#area6#cru10" name="FotosMiniatura" entity="ent9" bulk="true"/>
+    <SelectorUnit gr:x="376" gr:y="616" id="sv2#area6#seu15" name="MarcasModelos" entity="ent2" linkOrder="sv2#area6#seu15#ln68">
+      <Selector id="sv2#area6#seu15#su11" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv2#area6#seu15#su11#rcond6" name="MarcaToModelo" predicate="in" implied="false" role="rel1#role1"/>
+      </Selector>
+      <Link id="sv2#area6#seu15#ln68" name="Link68" to="sv2#area6#page17#enu8" type="transport" validate="true" gr:bendpoints="-159,-34,145,61">
+        <LinkParameter id="sv2#area6#seu15#ln68#par130" name="ModeloToMarca.oid_Marca - Preselection" source="rel1#role2_ent1#att1Array" target="sv2#area6#page17#enu8#sfld16_presel"/>
+        <LinkParameter id="sv2#area6#seu15#ln68#par131" name="NomeModelo_Modelo [label]" source="ent2#att4Array" target="sv2#area6#page17#enu8#sfld12_label"/>
+        <LinkParameter id="sv2#area6#seu15#ln68#par132" name="oid_Modelo [output]" source="ent2#att3Array" target="sv2#area6#page17#enu8#sfld12_output"/>
+      </Link>
+    </SelectorUnit>
+    <ModifyUnit gr:x="376" gr:y="506" id="sv2#area6#mfu6" name="Editar Fotos" entity="ent9" bulk="true">
+      <Selector id="sv2#area6#mfu6#su30" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area6#mfu6#su30#kcond21" name="KeyCondition21" predicate="in" implied="false"/>
+      </Selector>
+    </ModifyUnit>
   </OperationUnits>
 </Area>

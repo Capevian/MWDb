@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area3#page2" name="Miniatura">
   <ContentUnits>
-    <DataUnit gr:x="10" gr:y="0" id="sv1#area3#page2#dau2" name="Miniatura" entity="ent3" displayAttributes="ent3#att7 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel2#role4.ent2#att8 rel4#role8.ent5#att12 rel5#role10.ent6#att14 avg(rel8#role16.ent8#att28)">
+    <DataUnit gr:x="10" gr:y="14" id="sv1#area3#page2#dau2" name="Miniatura" entity="ent3" displayAttributes="ent3#att7 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel2#role4.ent2#att8 rel4#role8.ent5#att12 rel5#role10.ent6#att14 avg(rel8#role16.ent8#att28)">
       <Selector id="sv1#area3#page2#dau2#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area3#page2#dau2#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -10,19 +10,39 @@
       <Link id="sv1#area3#page2#dau2#ln44" name="Link44" to="sv1#area3#page2#inu7" type="transport" validate="true">
         <LinkParameter id="sv1#area3#page2#dau2#ln44#par88" name="oid_mini_MiniaturaToComent&#225;rio [oid_mini]" source="data.ent3#att6" target="sv1#area3#page2#inu7#su27#rcond1.ent3#att6"/>
       </Link>
+      <Link id="sv1#area3#page2#dau2#ln53" name="Link53" to="sv1#cru6" type="transport" validate="true" gr:bendpoints="109,61,-195,-38">
+        <LinkParameter id="sv1#area3#page2#dau2#ln53#par95" name="oid_mini_Miniatura.oid_mini(Coment&#225;rioToMiniatura)" source="data.ent3#att6" target="sv1#cru6.rel6#role11.ent3#att6"/>
+      </Link>
+      <Link id="sv1#area3#page2#dau2#ln42" name="Link42" to="sv1#area3#cru8" type="transport" validate="true">
+        <LinkParameter id="sv1#area3#page2#dau2#ln42#par111" name="oid_mini_miniOid" source="data.ent3#att6" target="sv1#area3#cru8.ent8#att27"/>
+      </Link>
     </DataUnit>
-    <MultiDataUnit gr:x="0" gr:y="176" id="sv1#area3#page2#mdu1" name="Fotos_Miniatura" entity="ent9" displayAttributes="ent9#att24">
+    <MultiDataUnit gr:x="0" gr:y="190" id="sv1#area3#page2#mdu1" name="Fotos" entity="ent9" displayAttributes="ent9#att24">
       <SortAttribute attribute="ent9#att23" order="ascending"/>
       <Selector id="sv1#area3#page2#mdu1#su2" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area3#page2#mdu1#su2#acond2" name="fotosMini" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role20.ent3#att6"/>
       </Selector>
     </MultiDataUnit>
-    <IndexUnit gr:x="136" gr:y="6" id="sv1#area3#page2#inu7" name="Coment&#225;rios" entity="ent7" displayAttributes="ent7#att20 ent7#att25 rel7#role13.userName">
+    <IndexUnit gr:x="136" gr:y="0" id="sv1#area3#page2#inu7" name="Coment&#225;rios" entity="ent7" displayAttributes="ent7#att20 ent7#att25 rel7#role13.userName">
       <SortAttribute attribute="ent7#att20" order="ascending"/>
       <Selector id="sv1#area3#page2#inu7#su27" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area3#page2#inu7#su27#rcond1" name="MiniaturaToComent&#225;rio" predicate="in" implied="false" role="rel6#role12"/>
       </Selector>
     </IndexUnit>
+    <EntryUnit id="sv1#area3#page2#enu19" name="Coment&#225;rio" linkOrder="sv1#area3#page2#enu19#ln51" gr:x="156" gr:y="210">
+      <Link id="sv1#area3#page2#enu19#ln51" name="Enviar" to="sv1#cru6" type="normal" validate="true">
+        <LinkParameter id="sv1#area3#page2#enu19#ln51#par93" name="Texto_Texto" source="sv1#area3#page2#enu19#fld38" target="sv1#cru6.ent7#att25"/>
+      </Link>
+      <Field id="sv1#area3#page2#enu19#fld38" name="Texto" type="text" modifiable="true" contentType="text/plain"/>
+    </EntryUnit>
+    <EntryUnit gr:x="156" gr:y="336" id="sv1#area3#page2#enu12" name="Avalia&#231;&#227;o" linkOrder="sv1#area3#page2#enu12#ln4">
+      <Link id="sv1#area3#page2#enu12#ln4" name="Avaliar" to="sv1#area3#cru8" type="normal" validate="true">
+        <LinkParameter id="sv1#area3#page2#enu12#ln4#par91" name="avaliacao_avaliacao" source="sv1#area3#page2#enu12#sfld7" target="sv1#area3#cru8.ent8#att28"/>
+      </Link>
+      <SelectionField id="sv1#area3#page2#enu12#sfld7" name="Avalia&#231;&#227;o" type="integer" preselectValue="1" splitOutput="false">
+        <Slot id="sv1#area3#page2#enu12#sfld7#slot6" name="Avalia&#231;&#227;o" label="true" output="true" value="1|2|3|4|5"/>
+      </SelectionField>
+    </EntryUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
@@ -36,10 +56,23 @@
           <layout:Attribute attribute="rel5#role10.ent6#att14"/>
           <layout:Attribute attribute="avg(rel8#role16.ent8#att28)"/>
         </layout:Unit>
-      </layout:Cell>
-      <layout:Cell>
         <layout:Unit unitId="sv1#area3#page2#mdu1">
           <layout:Attribute attribute="ent9#att24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area3#page2#enu19">
+          <layout:Link link="sv1#area3#page2#enu19#ln51"/>
+          <layout:Field field="sv1#area3#page2#enu19#fld38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area3#page2#enu12">
+          <layout:Link link="sv1#area3#page2#enu12#ln4"/>
+          <layout:Field field="sv1#area3#page2#enu12#sfld7"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell>
@@ -49,10 +82,6 @@
           <layout:Attribute attribute="rel7#role13.userName"/>
         </layout:Unit>
       </layout:Cell>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
-      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>

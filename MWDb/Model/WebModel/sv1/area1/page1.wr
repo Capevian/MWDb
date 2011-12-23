@@ -1,28 +1,18 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" landmark="true" linkOrder="sv1#area1#page1#ln49">
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv1#area1#page1#dau10" name="&#218;ltima Miniatura" entity="ent3" displayAttributes="rel5#role10.ent6#att14 rel2#role4.rel1#role2.ent1#att2 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel4#role8.ent5#att12 ent3#att7">
       <Selector id="sv1#area1#page1#dau10#su25" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv1#area1#page1#dau10#su25#acond3" name="AttCondition3" predicate="eq" booleanOperator="or" implied="false" attributes="ent3#att6" value="1"/>
       </Selector>
     </DataUnit>
-    <EntryUnit gr:x="8" gr:y="96" id="sv1#area1#page1#enu12" name="Login" linkOrder="sv1#area1#page1#enu12#ln4">
-      <Field id="sv1#area1#page1#enu12#fld27" name="username" type="string" modifiable="true" contentType="text/plain"/>
-      <Field id="sv1#area1#page1#enu12#fld28" name="password" type="password" modifiable="true"/>
-      <Link id="sv1#area1#page1#enu12#ln4" name="Iniciar Sess&#227;o" to="sv1#lgu1" type="normal" validate="true" gr:bendpoints="-98,41,34,60">
-        <LinkParameter id="sv1#area1#page1#enu12#ln4#par60" name="username_Username" source="sv1#area1#page1#enu12#fld27" target="sv1#lgu1.username"/>
-        <LinkParameter id="sv1#area1#page1#enu12#ln4#par61" name="password_Password" source="sv1#area1#page1#enu12#fld28" target="sv1#lgu1.password"/>
-      </Link>
-    </EntryUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
-      <layout:Cell>
-        <layout:Unit unitId="sv1#area1#page1#enu12">
-          <layout:Field field="sv1#area1#page1#enu12#fld27"/>
-          <layout:Field field="sv1#area1#page1#enu12#fld28"/>
-          <layout:Link link="sv1#area1#page1#enu12#ln4"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv1#area1#page1#dau10">
           <layout:Attribute attribute="rel5#role10.ent6#att14"/>
@@ -34,10 +24,6 @@
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
-      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
@@ -46,4 +32,5 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Link id="sv1#area1#page1#ln49" name="Logout" to="sv1#lou1" type="normal" automaticCoupling="true" validate="true"/>
 </Page>

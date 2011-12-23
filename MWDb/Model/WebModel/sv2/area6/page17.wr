@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="356" id="sv2#area6#page17" name="Editar Miniaturas" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="350" id="sv2#area6#page17" name="Editar Miniaturas" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area6#page17#pwu7" name="Miniaturas" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="rel5#role10.ent6#att14 rel4#role8.ent5#att12 rel2#role4.rel1#role2.ent1#att2 rel2#role4.ent2#att4 rel2#role4.ent2#att5" sortHistorySize="1" blockFactor="10" blockWindow="10" ajaxComputeAlways="true" linkOrder="sv2#area6#page17#pwu7#ln30">
+    <PowerIndexUnit gr:x="0" gr:y="6" id="sv2#area6#page17#pwu7" name="Miniaturas" sortable="true" checkable="false" useCountQuery="false" entity="ent3" displayAttributes="rel5#role10.ent6#att14 rel4#role8.ent5#att12 rel2#role4.rel1#role2.ent1#att2 rel2#role4.ent2#att4 rel2#role4.ent2#att5" sortHistorySize="1" blockFactor="10" blockWindow="10" ajaxComputeAlways="true" linkOrder="sv2#area6#page17#pwu7#ln30">
       <SortAttribute attribute="rel2#role4.rel1#role2.ent1#att2" order="ascending"/>
       <SortAttribute attribute="rel2#role4.ent2#att4" order="ascending"/>
       <SortAttribute attribute="rel2#role4.ent2#att5" order="ascending"/>
@@ -8,11 +8,7 @@
       <SortAttribute attribute="rel4#role8.ent5#att12" order="ascending"/>
       <SortAttribute attribute="rel5#role10.ent6#att14" order="ascending"/>
       <Link id="sv2#area6#page17#pwu7#ln30" name="Editar" to="sv2#area6#page17#enu8" type="normal" validate="true">
-        <LinkParameter id="sv2#area6#page17#pwu7#ln30#par70" name="MiniaturaToConstrutor.NomeConstrutor_Construtor [label]" source="data[].rel5#role10$ent6#att14" target="sv2#area6#page17#enu8#sfld10_label"/>
-        <LinkParameter id="sv2#area6#page17#pwu7#ln30#par71" name="MiniaturaToConstrutor.oid_Construtor [output]" source="data[].rel5#role10_ent6#att13" target="sv2#area6#page17#enu8#sfld10_output"/>
         <LinkParameter id="sv2#area6#page17#pwu7#ln30#par72" name="Descricao_Descricao" source="data[].ent3#att7" target="sv2#area6#page17#enu8#fld14_slot"/>
-        <LinkParameter id="sv2#area6#page17#pwu7#ln30#par73" name="MiniaturaToEscala.Descricao_Escala [label]" source="data[].rel4#role8$ent5#att12" target="sv2#area6#page17#enu8#sfld11_label"/>
-        <LinkParameter id="sv2#area6#page17#pwu7#ln30#par74" name="MiniaturaToEscala.oid_Escala [output]" source="data[].rel4#role8_ent5#att11" target="sv2#area6#page17#enu8#sfld11_output"/>
         <LinkParameter id="sv2#area6#page17#pwu7#ln30#par75" name="MiniaturaToModelo.NomeModelo_Modelo [label]" source="data[].rel2#role4$ent2#att4" target="sv2#area6#page17#enu8#sfld12_label"/>
         <LinkParameter id="sv2#area6#page17#pwu7#ln30#par76" name="MiniaturaToModelo.oid_Modelo [output]" source="data[].rel2#role4_ent2#att3" target="sv2#area6#page17#enu8#sfld12_output"/>
         <LinkParameter id="sv2#area6#page17#pwu7#ln30#par77" name="oid_mini_oid_mini" source="data[].ent3#att6" target="sv2#area6#page17#enu8#fld13_slot"/>
@@ -20,26 +16,62 @@
         <LinkParameter id="sv2#area6#page17#pwu7#ln30#par84" name="MiniaturaToEscala.Descricao_Escala - Preselection" source="data[].rel4#role8_ent5#att11" target="sv2#area6#page17#enu8#sfld11_presel"/>
         <LinkParameter id="sv2#area6#page17#pwu7#ln30#par85" name="MiniaturaToModelo.NomeModelo_Modelo - Preselection" source="data[].rel2#role4_ent2#att3" target="sv2#area6#page17#enu8#sfld12_presel"/>
       </Link>
+      <Link id="sv2#area6#page17#pwu7#ln73" name="Link73" to="sv2#area6#page17#meu6" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page17#pwu7#ln73#par134" name="oid_mini_Checked Objects" source="data[].ent3#att6" target="sv2#area6#page17#meu6.pre.key.set"/>
+        <LinkParameter id="sv2#area6#page17#pwu7#ln73#par135" name="oid_mini_Input Objects" source="data[].ent3#att6" target="sv2#area6#page17#meu6.key.set"/>
+      </Link>
     </PowerIndexUnit>
-    <EntryUnit gr:x="134" gr:y="4" id="sv2#area6#page17#enu8" name="Edita Miniatura" linkOrder="sv2#area6#page17#enu8#ln31">
+    <EntryUnit gr:x="10" gr:y="140" id="sv2#area6#page17#enu8" name="Edita Miniatura" linkOrder="sv2#area6#page17#enu8#ln31 sv2#area6#page17#enu8#ln69">
       <Field id="sv2#area6#page17#enu8#fld13" name="oid_mini" type="integer" modifiable="false" preloaded="true" hidden="true"/>
       <Field id="sv2#area6#page17#enu8#fld14" name="Descricao" type="string" modifiable="true" preloaded="true"/>
       <SelectionField id="sv2#area6#page17#enu8#sfld10" name="Construtor" type="string"/>
       <SelectionField id="sv2#area6#page17#enu8#sfld11" name="Escala" type="string"/>
       <SelectionField id="sv2#area6#page17#enu8#sfld12" name="Modelo" type="string"/>
-      <Link id="sv2#area6#page17#enu8#ln31" name="Guardar" to="sv2#area6#mfu3" type="normal" validate="true">
+      <Link id="sv2#area6#page17#enu8#ln31" name="Guardar" to="sv2#area6#mfu3" type="normal" validate="true" gr:bendpoints="223,-9,-121,78">
         <LinkParameter id="sv2#area6#page17#enu8#ln31#par78" name="Construtor_Construtor.oid(MiniaturaToConstrutor)" source="sv2#area6#page17#enu8#sfld10" target="sv2#area6#mfu3.rel5#role10.ent6#att13"/>
         <LinkParameter id="sv2#area6#page17#enu8#ln31#par79" name="Descricao_Descricao" source="sv2#area6#page17#enu8#fld14" target="sv2#area6#mfu3.ent3#att7"/>
         <LinkParameter id="sv2#area6#page17#enu8#ln31#par80" name="Escala_Escala.oid(MiniaturaToEscala)" source="sv2#area6#page17#enu8#sfld11" target="sv2#area6#mfu3.rel4#role8.ent5#att11"/>
         <LinkParameter id="sv2#area6#page17#enu8#ln31#par81" name="Modelo_Modelo.oid(MiniaturaToModelo)" source="sv2#area6#page17#enu8#sfld12" target="sv2#area6#mfu3.rel2#role4.ent2#att3"/>
         <LinkParameter id="sv2#area6#page17#enu8#ln31#par82" name="oid_mini_KeyCondition7 [oid_mini]" source="sv2#area6#page17#enu8#fld13" target="sv2#area6#mfu3#su12#kcond7.ent3#att6"/>
       </Link>
+      <SelectionField id="sv2#area6#page17#enu8#sfld16" name="Marca" type="string" ajaxEventEnabled="true" ajaxEventLink="sv2#area6#page17#enu8#ln69"/>
+      <Link id="sv2#area6#page17#enu8#ln69" name="Link66" to="sv2#area6#seu15" type="normal" validate="true" ajaxEnabled="true">
+        <LinkParameter id="sv2#area6#page17#enu8#ln69#par129" name="Marca_MarcaToModelo [oid]" source="sv2#area6#page17#enu8#sfld16" target="sv2#area6#seu15#su11#rcond6.ent1#att1"/>
+      </Link>
+      <Link id="sv2#area6#page17#enu8#ln75" name="Link75" to="sv2#area6#mfu6" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page17#enu8#ln75#par137" name="oid_mini_Miniatura.oid_mini(FotosToMiniatura)" source="sv2#area6#page17#enu8#fld13" target="sv2#area6#mfu6.rel10#role20.ent3#att6"/>
+      </Link>
     </EntryUnit>
-    <DataUnit gr:x="144" gr:y="94" id="sv2#area6#page17#dau9" name="Miniatura" entity="ent3" displayAll="true">
+    <DataUnit gr:x="230" gr:y="0" id="sv2#area6#page17#dau9" name="Miniatura" entity="ent3" displayAll="true">
       <Selector id="sv2#area6#page17#dau9#su14" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area6#page17#dau9#su14#kcond9" name="KeyCondition9" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
+    <SelectorUnit gr:x="10" gr:y="250" id="sv2#area6#page17#seu9" name="Construtor" entity="ent6">
+      <Link id="sv2#area6#page17#seu9#ln62" name="Link62" to="sv2#area6#page17#enu8" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page17#seu9#ln62#par116" name="NomeConstrutor_Construtor [label]" source="ent6#att14Array" target="sv2#area6#page17#enu8#sfld10_label"/>
+        <LinkParameter id="sv2#area6#page17#seu9#ln62#par117" name="oid_Construtor [output]" source="ent6#att13Array" target="sv2#area6#page17#enu8#sfld10_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="100" gr:y="250" id="sv2#area6#page17#seu10" name="Escalas" entity="ent5">
+      <Link id="sv2#area6#page17#seu10#ln63" name="Link63" to="sv2#area6#page17#enu8" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page17#seu10#ln63#par118" name="Descricao_Escala [label]" source="ent5#att12Array" target="sv2#area6#page17#enu8#sfld11_label"/>
+        <LinkParameter id="sv2#area6#page17#seu10#ln63#par119" name="oid_Escala [output]" source="ent5#att11Array" target="sv2#area6#page17#enu8#sfld11_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit gr:x="180" gr:y="250" id="sv2#area6#page17#seu13" name="Marcas" entity="ent1">
+      <Link id="sv2#area6#page17#seu13#ln64" name="Link64" to="sv2#area6#page17#enu8" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page17#seu13#ln64#par127" name="NomeMarca_Marca [label]" source="ent1#att2Array" target="sv2#area6#page17#enu8#sfld16_label"/>
+        <LinkParameter id="sv2#area6#page17#seu13#ln64#par128" name="oid_Marca [output]" source="ent1#att1Array" target="sv2#area6#page17#enu8#sfld16_output"/>
+      </Link>
+    </SelectorUnit>
+    <MultiEntryUnit gr:x="120" gr:y="50" id="sv2#area6#page17#meu6" name="Edita Fotos" minLength="1">
+      <Field id="sv2#area6#page17#meu6#fld33" name="Fotos" type="blob" modifiable="true" contentType="image"/>
+      <Link id="sv2#area6#page17#meu6#ln74" name="Link74" to="sv2#area6#mfu6" type="transport" validate="true">
+        <LinkParameter id="sv2#area6#page17#meu6#ln74#par136" name="Fotos_foto" source="sv2#area6#page17#meu6#fld33" target="sv2#area6#mfu6.ent9#att24"/>
+        <LinkParameter id="sv2#area6#page17#meu6#ln74#par138" name="Fotos_KeyCondition21 [oid]" source="sv2#area6#page17#meu6#fld33" target="sv2#area6#mfu6#su30#kcond21.ent9#att23"/>
+      </Link>
+    </MultiEntryUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
@@ -63,28 +95,34 @@
           <layout:Link link="sv2#area6#page17#pwu7Last"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv2#area6#page17#enu8">
-          <layout:Link link="sv2#area6#page17#enu8#ln31"/>
           <layout:Field field="sv2#area6#page17#enu8#fld14"/>
           <layout:Field field="sv2#area6#page17#enu8#sfld10"/>
           <layout:Field field="sv2#area6#page17#enu8#sfld11"/>
           <layout:Field field="sv2#area6#page17#enu8#sfld12"/>
+          <layout:Field field="sv2#area6#page17#enu8#sfld16"/>
+          <layout:Link link="sv2#area6#page17#enu8#ln31"/>
+          <layout:Link link="sv2#area6#page17#enu8#ln69"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area6#page17#meu6">
+          <layout:Field field="sv2#area6#page17#meu6#fld33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv2#area6#page17#dau9">
           <layout:Attribute attribute="ent3#att7"/>
         </layout:Unit>
       </layout:Cell>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

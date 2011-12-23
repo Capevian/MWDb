@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page20" name="Cat&#225;logoTipos" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page20" name="Tipos" landmark="true">
   <ContentUnits>
-    <IndexUnit id="sv1#area2#page20#inu6" name="Tipos de Minis" linkOrder="sv1#area2#page20#inu6#ln45" gr:x="0" gr:y="0" entity="ent4" displayAttributes="ent4#att10">
+    <IndexUnit id="sv1#area2#page20#inu6" name="Tipos" linkOrder="sv1#area2#page20#inu6#ln45" gr:x="0" gr:y="0" entity="ent4" displayAttributes="ent4#att10">
       <SortAttribute attribute="ent4#att10" order="ascending"/>
       <Link id="sv1#area2#page20#inu6#ln45" name="Marcas" to="sv1#area2#page4#dau12" automaticCoupling="true" type="normal" validate="true"/>
     </IndexUnit>

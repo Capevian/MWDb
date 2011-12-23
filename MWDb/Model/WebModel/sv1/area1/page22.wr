@@ -1,0 +1,35 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="14" gr:y="162" id="sv1#area1#page22" name="Login Page" landmark="false" protected="false">
+  <ContentUnits>
+    <EntryUnit id="sv1#area1#page22#enu13" name="Login" linkOrder="sv1#area1#page22#enu13#ln38" gr:x="0" gr:y="0">
+      <Field id="sv1#area1#page22#enu13#fld29" name="username" type="string" modifiable="true" contentType="text/plain"/>
+      <Field id="sv1#area1#page22#enu13#fld30" name="password" type="password" modifiable="true"/>
+      <Link id="sv1#area1#page22#enu13#ln38" name="Iniciar Sess&#227;o" to="sv1#lgu1" type="normal" validate="true" gr:bendpoints="-98,41,34,60">
+        <LinkParameter id="sv1#area1#page22#enu13#ln38#par68" name="username_Username" source="sv1#area1#page22#enu13#fld29" target="sv1#lgu1.username"/>
+        <LinkParameter id="sv1#area1#page22#enu13#ln38#par69" name="password_Password" source="sv1#area1#page22#enu13#fld30" target="sv1#lgu1.password"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area1#page22#enu13">
+          <layout:Field field="sv1#area1#page22#enu13#fld29"/>
+          <layout:Field field="sv1#area1#page22#enu13#fld30"/>
+          <layout:Link link="sv1#area1#page22#enu13#ln38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
