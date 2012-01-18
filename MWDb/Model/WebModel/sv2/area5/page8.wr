@@ -1,0 +1,36 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="370" gr:y="390" id="sv2#area5#page8" name="Modelo Alterado">
+  <ContentUnits>
+    <DataUnit id="sv2#area5#page8#dau16" name="Modelo Alterado" gr:x="0" gr:y="0" entity="ent2" displayAttributes="ent2#att4 ent2#att5 ent2#att8 rel1#role2.ent1#att2 ent2#att29" linkOrder="sv2#area5#page8#dau16#ln13">
+      <Selector id="sv2#area5#page8#dau16#su5" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv2#area5#page8#dau16#su5#kcond6" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv2#area5#page8#dau16#ln13" name="Voltar Atr&#225;s" to="sv2#area5#page12" automaticCoupling="true" type="normal" validate="true"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid>
+    <layout:Row>
+      <layout:Cell>
+        <layout:Unit label="Modelo alterado com sucesso" unitId="sv2#area5#page8#dau16" manualAttributes="true" manualAttributeOrder="rel1#role2.ent1#att2 ent2#att4 ent2#att5 ent2#att8 ent2#att29">
+          <layout:Attribute label="Marca" attribute="rel1#role2.ent1#att2"/>
+          <layout:Attribute label="Modelo" attribute="ent2#att4"/>
+          <layout:Attribute label="Ano de Lan&#231;amento" attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att8"/>
+          <layout:Attribute label="Foto" attribute="ent2#att29"/>
+          <layout:Link link="sv2#area5#page8#dau16#ln13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

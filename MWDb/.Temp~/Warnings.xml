@@ -1,64 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Warnings> 
-  <Warning xpath="id('sv2#area4#mfu2')" rootXPath="id('sv2')" error="false" label="AlteraMarca" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'AlteraMarca'</Message> 
+  <Warning xpath="id('sv1#lgu1')" rootXPath="id('sv1')" error="false" label="Login" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK link(s) for the operation unit 'Login'</Message> 
   </Warning>  
-  <Warning xpath="id('sv2#area4#dlu1')" rootXPath="id('sv2')" error="false" label="Apagar Marcas" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'Apagar Marcas'</Message> 
+  <Warning xpath="id('sv1#cru6')" rootXPath="id('sv1')" error="false" label="Coment&#225;rio" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'Coment&#225;rio'</Message> 
   </Warning>  
-  <Warning xpath="id('sv2#area5#cru2')" rootXPath="id('sv2')" error="false" label="NovoModelo" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'NovoModelo'</Message> 
+  <Warning xpath="id('sv1#lou1')" rootXPath="id('sv1')" error="false" label="Logout" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'Logout'</Message> 
   </Warning>  
-  <Warning xpath="id('sv2#area5#dlu2')" rootXPath="id('sv2')" error="false" label="Apagar Modelo" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'Apagar Modelo'</Message> 
+  <Warning xpath="id('sv1#area3#tmu1')" rootXPath="id('sv1')" error="false" label="Get Time" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'Get Time'</Message> 
   </Warning>  
-  <Warning xpath="id('sv2#area5#cru9')" rootXPath="id('sv2')" error="false" label="FotosModelo" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK link(s) for the operation unit 'FotosModelo'</Message> 
+  <Warning xpath="id('sv1#area3#cru8')" rootXPath="id('sv1')" error="false" label="Avalia&#231;&#227;o" key="NO_OUTGOING_OK_LINKS"> 
+    <Message>No outgoing OK link(s) for the operation unit 'Avalia&#231;&#227;o'</Message> 
   </Warning>  
-  <Warning xpath="id('sv2#area5#cru9')" rootXPath="id('sv2')" error="false" label="FotosModelo" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'FotosModelo'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#seu11')" rootXPath="id('sv2')" error="false" label="MarcasModelos" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK link(s) for the operation unit 'MarcasModelos'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#seu11')" rootXPath="id('sv2')" error="false" label="MarcasModelos" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'MarcasModelos'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#cru5')" rootXPath="id('sv2')" error="false" label="NovaMiniatura" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'NovaMiniatura'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#cru10')" rootXPath="id('sv2')" error="false" label="FotosMiniatura" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK link(s) for the operation unit 'FotosMiniatura'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#cru10')" rootXPath="id('sv2')" error="false" label="FotosMiniatura" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'FotosMiniatura'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#seu15')" rootXPath="id('sv2')" error="false" label="MarcasModelos" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK link(s) for the operation unit 'MarcasModelos'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#seu15')" rootXPath="id('sv2')" error="false" label="MarcasModelos" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'MarcasModelos'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#mfu6')" rootXPath="id('sv2')" error="false" label="Editar Fotos" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK link(s) for the operation unit 'Editar Fotos'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area6#mfu6')" rootXPath="id('sv2')" error="false" label="Editar Fotos" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'Editar Fotos'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area7#dlu3')" rootXPath="id('sv2')" error="false" label="Apagar Construtor" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'Apagar Construtor'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area8#mfu5')" rootXPath="id('sv2')" error="false" label="PublicarComent&#225;rio" key="NO_OUTGOING_OK_LINKS"> 
-    <Message>No outgoing OK link(s) for the operation unit 'PublicarComent&#225;rio'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area8#mfu5')" rootXPath="id('sv2')" error="false" label="PublicarComent&#225;rio" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'PublicarComent&#225;rio'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area8#dlu5')" rootXPath="id('sv2')" error="false" label="ApagarComent&#225;rio" key="NO_OUTGOING_KO_LINKS"> 
-    <Message>No outgoing KO link(s) for the operation unit 'ApagarComent&#225;rio'</Message> 
-  </Warning>  
-  <Warning xpath="id('sv2#area5#page12#enu7')" rootXPath="id('sv2')" key="MISSING_MANDATORY_OUTPUT_PARAMETER" label="Editar Modelo"> 
-    <Message>The mandatory output parameter 'Fotos_Modelo' is not transported along an outgoing link from the unit 'Editar Modelo'</Message> 
+  <Warning xpath="id('sv1#area3#cru8')" rootXPath="id('sv1')" error="false" label="Avalia&#231;&#227;o" key="NO_OUTGOING_KO_LINKS"> 
+    <Message>No outgoing KO link(s) for the operation unit 'Avalia&#231;&#227;o'</Message> 
   </Warning> 
 </Warnings>

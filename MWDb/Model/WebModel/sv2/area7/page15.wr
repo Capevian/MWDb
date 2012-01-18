@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area7#page15" name="Novo Construtor" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area7#page15" name="Adicionar" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv2#area7#page15#enu9" name="Novo Construtor" linkOrder="sv2#area7#page15#enu9#ln22">
       <Field id="sv2#area7#page15#enu9#fld19" name="NomeConstrutor" type="string" modifiable="true"/>
@@ -11,7 +11,7 @@
         <LinkParameter id="sv2#area7#page15#enu9#ln22#par48" name="Logo_Logo" source="sv2#area7#page15#enu9#fld20" target="sv2#cru4.ent6#att15"/>
       </Link>
     </EntryUnit>
-    <DataUnit gr:x="16" gr:y="66" id="sv2#area7#page15#dau7" name="Construtor" entity="ent6" displayAttributes="ent6#att13 ent6#att14 ent6#att15 ent6#att16">
+    <DataUnit gr:x="16" gr:y="66" id="sv2#area7#page15#dau7" name="Construtor" entity="ent6" displayAttributes="ent6#att14 ent6#att15 ent6#att16">
       <Selector id="sv2#area7#page15#dau7#su19" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area7#page15#dau7#su19#kcond14" name="KeyCondition14" predicate="in" implied="false"/>
       </Selector>
@@ -21,24 +21,23 @@
     <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv2#area7#page15#enu9">
-          <layout:Field field="sv2#area7#page15#enu9#fld19"/>
-          <layout:Field field="sv2#area7#page15#enu9#fld20"/>
+          <layout:Field field="sv2#area7#page15#enu9#fld19" label="Nome"/>
+          <layout:Field field="sv2#area7#page15#enu9#fld20" label="Log&#243;tipo"/>
           <layout:Field field="sv2#area7#page15#enu9#fld21"/>
           <layout:Link link="sv2#area7#page15#enu9#ln22"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell>
-        <layout:Unit unitId="sv2#area7#page15#dau7">
-          <layout:Attribute attribute="ent6#att13"/>
-          <layout:Attribute attribute="ent6#att14"/>
-          <layout:Attribute attribute="ent6#att15"/>
-          <layout:Attribute attribute="ent6#att16"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area7#page15#dau7" label="Construtor adicionado com sucesso:">
+          <layout:Attribute attribute="ent6#att14" label="Nome"/>
+          <layout:Attribute attribute="ent6#att15" label="Log&#243;tipo"/>
+          <layout:Attribute attribute="ent6#att16"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

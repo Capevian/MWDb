@@ -1,13 +1,14 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page5" name="Modelos" gr:x="304" gr:y="4" landmark="false">
   <ContentUnits>
     <IndexUnit id="sv1#area2#page5#inu4" name="Modelos" gr:x="0" gr:y="130" entity="ent2" displayAttributes="ent2#att4 ent2#att5 ent2#att8" linkOrder="sv1#area2#page5#inu4#ln5">
-      <SortAttribute attribute="ent2#att3" order="ascending"/>
       <Link id="sv1#area2#page5#inu4#ln5" name="Detalhes" to="sv1#area2#page6#dau1" type="normal" validate="true">
         <LinkParameter id="sv1#area2#page5#inu4#ln5#par7" name="oid_selectedModelo" source="data[].ent2#att3" target="sv1#area2#page6#dau1#su6#acond6"/>
       </Link>
       <Selector id="sv1#area2#page5#inu4#su29" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area2#page5#inu4#su29#rcond4" name="MarcaToModelo" predicate="in" implied="false" role="rel1#role1"/>
       </Selector>
+      <SortAttribute attribute="ent2#att4" order="ascending"/>
+      <SortAttribute attribute="ent2#att5" order="ascending"/>
     </IndexUnit>
     <DataUnit gr:x="10" gr:y="0" id="sv1#area2#page5#dau11" name="Marca" entity="ent1" displayAttributes="ent1#att2 ent1#att18" linkOrder="sv1#area2#page5#dau11#ln36">
       <Selector id="sv1#area2#page5#dau11#su26" defaultPolicy="fill" booleanOperator="and">
@@ -22,24 +23,24 @@
   <layout:Grid>
     <layout:Row>
       <layout:Cell>
-        <layout:Unit unitId="sv1#area2#page5#dau11">
+        <layout:Unit unitId="sv1#area2#page5#dau11" label=" ">
           <layout:Link link="sv1#area2#page5#dau11#ln36"/>
-          <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att18"/>
+          <layout:Attribute attribute="ent1#att2" label="Marca"/>
+          <layout:Attribute attribute="ent1#att18" label=" "/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv1#area2#page5#inu4">
-          <layout:Attribute attribute="ent2#att4"/>
-          <layout:Attribute attribute="ent2#att5"/>
+          <layout:Attribute attribute="ent2#att4" label="Modelo"/>
+          <layout:Attribute attribute="ent2#att5" label="Ano"/>
           <layout:Attribute attribute="ent2#att8"/>
           <layout:Link link="sv1#area2#page5#inu4#ln5"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

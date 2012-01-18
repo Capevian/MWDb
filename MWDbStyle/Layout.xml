@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Layout pageLayout="Default" frameLayout="Default"> 
+  <LinkedResource path="MWDbStyle/css/units.css"/>  
+  <LinkedResource path="MWDbStyle/css/style.css"/> 
+</Layout>

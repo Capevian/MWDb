@@ -1,11 +1,11 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv1#area2#page4" name="Marcas" landmark="false" gr:x="174" gr:y="4">
   <ContentUnits>
-    <IndexUnit id="sv1#area2#page4#inu3" name="Marcas" gr:x="10" gr:y="130" entity="ent1" displayAttributes="ent1#att2 ent1#att18" linkOrder="sv1#area2#page4#inu3#ln28">
-      <SortAttribute attribute="ent1#att2" order="descending"/>
+    <IndexUnit id="sv1#area2#page4#inu3" name="Marcas" gr:x="0" gr:y="130" entity="ent1" displayAttributes="ent1#att18" linkOrder="sv1#area2#page4#inu3#ln28">
       <Selector id="sv1#area2#page4#inu3#su4" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area2#page4#inu3#su4#rcond2" name="TipoToMarcas" predicate="in" implied="false" role="rel14#role27"/>
       </Selector>
       <Link id="sv1#area2#page4#inu3#ln28" name="Modelos" to="sv1#area2#page5#dau11" automaticCoupling="true" type="normal" validate="true"/>
+      <SortAttribute attribute="ent1#att2" order="ascending"/>
     </IndexUnit>
     <DataUnit gr:x="0" gr:y="0" id="sv1#area2#page4#dau12" name="Tipo" entity="ent4" displayAttributes="ent4#att10" linkOrder="sv1#area2#page4#dau12#ln3">
       <Selector id="sv1#area2#page4#dau12#su28" defaultPolicy="fill" booleanOperator="and">
@@ -18,22 +18,21 @@
   <layout:Grid>
     <layout:Row>
       <layout:Cell>
-        <layout:Unit unitId="sv1#area2#page4#dau12">
-          <layout:Attribute attribute="ent4#att10"/>
+        <layout:Unit unitId="sv1#area2#page4#dau12" label=" ">
+          <layout:Attribute attribute="ent4#att10" label=" "/>
           <layout:Link link="sv1#area2#page4#dau12#ln3"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell>
-        <layout:Unit unitId="sv1#area2#page4#inu3">
-          <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att18"/>
-          <layout:Link link="sv1#area2#page4#inu3#ln28"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area2#page4#inu3">
+          <layout:Link link="sv1#area2#page4#inu3#ln28"/>
+          <layout:Attribute attribute="ent1#att18" label="Marcas"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

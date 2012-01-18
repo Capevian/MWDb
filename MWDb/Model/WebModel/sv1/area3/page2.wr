@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area3#page2" name="Miniatura">
   <ContentUnits>
-    <DataUnit gr:x="10" gr:y="14" id="sv1#area3#page2#dau2" name="Miniatura" entity="ent3" displayAttributes="ent3#att7 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel2#role4.ent2#att8 rel4#role8.ent5#att12 rel5#role10.ent6#att14 avg(rel8#role16.ent8#att28)">
+    <DataUnit gr:x="10" gr:y="14" id="sv1#area3#page2#dau2" name="Miniatura" entity="ent3" displayAttributes="rel2#role4.rel1#role2.ent1#att2 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel5#role10.ent6#att14 rel4#role8.ent5#att12 ent3#att7 rel2#role4.ent2#att8 avg(rel8#role16.ent8#att28) ent3#att30" linkOrder="sv1#area3#page2#dau2#ln14">
       <Selector id="sv1#area3#page2#dau2#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv1#area3#page2#dau2#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -16,6 +16,9 @@
       <Link id="sv1#area3#page2#dau2#ln42" name="Link42" to="sv1#area3#cru8" type="transport" validate="true">
         <LinkParameter id="sv1#area3#page2#dau2#ln42#par111" name="oid_mini_miniOid" source="data.ent3#att6" target="sv1#area3#cru8.ent8#att27"/>
       </Link>
+      <Link id="sv1#area3#page2#dau2#ln14" name="Voltar Atr&#225;s" to="sv1#area2#page6#dau1" type="normal" validate="true">
+        <LinkParameter id="sv1#area3#page2#dau2#ln14#par43" name="MiniaturaToModelo.oid_selectedModelo" source="data.rel2#role4_ent2#att3" target="sv1#area2#page6#dau1#su6#acond6"/>
+      </Link>
     </DataUnit>
     <MultiDataUnit gr:x="0" gr:y="190" id="sv1#area3#page2#mdu1" name="Fotos" entity="ent9" displayAttributes="ent9#att24">
       <SortAttribute attribute="ent9#att23" order="ascending"/>
@@ -23,7 +26,7 @@
         <AttributesCondition id="sv1#area3#page2#mdu1#su2#acond2" name="fotosMini" predicate="eq" booleanOperator="or" implied="false" attributes="rel10#role20.ent3#att6"/>
       </Selector>
     </MultiDataUnit>
-    <IndexUnit gr:x="136" gr:y="0" id="sv1#area3#page2#inu7" name="Coment&#225;rios" entity="ent7" displayAttributes="ent7#att20 ent7#att25 rel7#role13.userName">
+    <IndexUnit gr:x="136" gr:y="0" id="sv1#area3#page2#inu7" name="Coment&#225;rios" entity="ent7" displayAttributes="rel7#role13.userName ent7#att25 ent7#att20">
       <SortAttribute attribute="ent7#att20" order="ascending"/>
       <Selector id="sv1#area3#page2#inu7#su27" defaultPolicy="fill" booleanOperator="and">
         <RelationshipRoleCondition id="sv1#area3#page2#inu7#su27#rcond1" name="MiniaturaToComent&#225;rio" predicate="in" implied="false" role="rel6#role12"/>
@@ -48,22 +51,30 @@
     <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv1#area3#page2#dau2">
-          <layout:Attribute attribute="ent3#att7"/>
-          <layout:Attribute attribute="rel2#role4.ent2#att4"/>
-          <layout:Attribute attribute="rel2#role4.ent2#att5"/>
-          <layout:Attribute attribute="rel2#role4.ent2#att8"/>
-          <layout:Attribute attribute="rel4#role8.ent5#att12"/>
-          <layout:Attribute attribute="rel5#role10.ent6#att14"/>
-          <layout:Attribute attribute="avg(rel8#role16.ent8#att28)"/>
+          <layout:Attribute attribute="rel2#role4.rel1#role2.ent1#att2" label="Marca"/>
+          <layout:Attribute attribute="rel2#role4.ent2#att4" label="Modelo"/>
+          <layout:Attribute attribute="rel2#role4.ent2#att5" label="Ano"/>
+          <layout:Attribute attribute="rel5#role10.ent6#att14" label="Construtor"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att12" label="Escala"/>
+          <layout:Attribute attribute="ent3#att7" label="Descri&#231;&#227;o"/>
+          <layout:Attribute attribute="rel2#role4.ent2#att8" label="Website"/>
+          <layout:Attribute attribute="avg(rel8#role16.ent8#att28)" label="Avalia&#231;&#227;o M&#233;dia"/>
+          <layout:Attribute attribute="ent3#att30" label="Foto"/>
+          <layout:Link link="sv1#area3#page2#dau2#ln14"/>
         </layout:Unit>
         <layout:Unit unitId="sv1#area3#page2#mdu1">
-          <layout:Attribute attribute="ent9#att24"/>
+          <layout:Attribute attribute="ent9#att24" label="Mais Fotos"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell>
         <layout:Unit unitId="sv1#area3#page2#enu19">
           <layout:Link link="sv1#area3#page2#enu19#ln51"/>
           <layout:Field field="sv1#area3#page2#enu19#fld38"/>
+        </layout:Unit>
+        <layout:Unit unitId="sv1#area3#page2#inu7">
+          <layout:Attribute attribute="rel7#role13.userName" label="Utilizador"/>
+          <layout:Attribute attribute="ent7#att25"/>
+          <layout:Attribute attribute="ent7#att20" label="Data"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -75,13 +86,7 @@
           <layout:Field field="sv1#area3#page2#enu12#sfld7"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell>
-        <layout:Unit unitId="sv1#area3#page2#inu7">
-          <layout:Attribute attribute="ent7#att20"/>
-          <layout:Attribute attribute="ent7#att25"/>
-          <layout:Attribute attribute="rel7#role13.userName"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>

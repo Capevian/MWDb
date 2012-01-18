@@ -1,28 +1,35 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" landmark="true" linkOrder="sv1#area1#page1#ln49">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area1#page1" name="Home" landmark="false" linkOrder="sv1#area1#page1#ln49">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv1#area1#page1#dau10" name="&#218;ltima Miniatura" entity="ent3" displayAttributes="rel5#role10.ent6#att14 rel2#role4.rel1#role2.ent1#att2 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel4#role8.ent5#att12 ent3#att7">
-      <Selector id="sv1#area1#page1#dau10#su25" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="sv1#area1#page1#dau10#su25#acond3" name="AttCondition3" predicate="eq" booleanOperator="or" implied="false" attributes="ent3#att6" value="1"/>
+    <DataUnit gr:x="0" gr:y="0" id="sv1#area1#page1#dau10" name="&#218;ltima Miniatura" entity="ent3" displayAttributes="rel5#role10.ent6#att14 rel2#role4.rel1#role2.ent1#att2 rel2#role4.ent2#att4 rel2#role4.ent2#att5 rel4#role8.ent5#att12 ent3#att30 ent3#att7" customDescriptor="false" linkOrder="sv1#area1#page1#dau10#ln20">
+      <Selector id="sv1#area1#page1#dau10#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv1#area1#page1#dau10#su17#kcond23" name="KeyCondition23" predicate="in" implied="false"/>
       </Selector>
+      <Link id="sv1#area1#page1#dau10#ln20" name="Detalhes" to="sv1#area3#page2#dau2" automaticCoupling="true" type="normal" validate="true"/>
     </DataUnit>
+    <SelectorUnit gr:x="6" gr:y="146" id="sv1#area1#page1#seu8" name="Ultima Mini" entity="ent3" maxResults="1" distinctAttributes="ent3#att6">
+      <Link id="sv1#area1#page1#seu8#ln43" name="Link43" to="sv1#area1#page1#dau10" automaticCoupling="true" type="transport" validate="true"/>
+      <SortAttribute attribute="ent3#att6" order="descending"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv1#area1#page1#dau10">
+          <layout:Attribute attribute="rel5#role10.ent6#att14" label="Construtor"/>
+          <layout:Attribute attribute="rel2#role4.rel1#role2.ent1#att2" label="Marca"/>
+          <layout:Attribute attribute="rel2#role4.ent2#att4" label="Modelo"/>
+          <layout:Attribute attribute="rel2#role4.ent2#att5" label="Ano de Lan&#231;amento"/>
+          <layout:Attribute attribute="rel4#role8.ent5#att12" label="Escala"/>
+          <layout:Attribute attribute="ent3#att30" label=" "/>
+          <layout:Attribute attribute="ent3#att7" label="Descri&#231;&#227;o"/>
+          <layout:Link link="sv1#area1#page1#dau10#ln20"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell>
-        <layout:Unit unitId="sv1#area1#page1#dau10">
-          <layout:Attribute attribute="rel5#role10.ent6#att14"/>
-          <layout:Attribute attribute="rel2#role4.rel1#role2.ent1#att2"/>
-          <layout:Attribute attribute="rel2#role4.ent2#att4"/>
-          <layout:Attribute attribute="rel2#role4.ent2#att5"/>
-          <layout:Attribute attribute="rel4#role8.ent5#att12"/>
-          <layout:Attribute attribute="ent3#att7"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

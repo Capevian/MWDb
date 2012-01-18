@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page20" name="Tipos" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv1#area2#page20" name="Tipos" landmark="false">
   <ContentUnits>
     <IndexUnit id="sv1#area2#page20#inu6" name="Tipos" linkOrder="sv1#area2#page20#inu6#ln45" gr:x="0" gr:y="0" entity="ent4" displayAttributes="ent4#att10">
       <SortAttribute attribute="ent4#att10" order="ascending"/>
@@ -8,8 +8,8 @@
   <layout:Grid>
     <layout:Row>
       <layout:Cell>
-        <layout:Unit unitId="sv1#area2#page20#inu6">
-          <layout:Attribute attribute="ent4#att10"/>
+        <layout:Unit unitId="sv1#area2#page20#inu6" label=" ">
+          <layout:Attribute attribute="ent4#att10" label=" "/>
           <layout:Link link="sv1#area2#page20#inu6#ln45"/>
         </layout:Unit>
       </layout:Cell>
@@ -27,4 +27,7 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <layout:UnitConfiguration unitType="IndexUnit" layout:unitLayout="WRDefault/Normal">
+    <layout:LayoutParameter name="link-position" value="on_row" type="unit"/>
+  </layout:UnitConfiguration>
 </Page>

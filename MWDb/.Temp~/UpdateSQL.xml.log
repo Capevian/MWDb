@@ -1,27 +1,26 @@
-[21 Dez 2011 00:29:40] DEBUG Executing SQL script
-[21 Dez 2011 00:29:40] INFO ================================================================================
-[21 Dez 2011 00:29:40] INFO outputPath= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.xml'
-[21 Dez 2011 00:29:40] INFO onError= 'continue'
-[21 Dez 2011 00:29:40] INFO statementSeparator= ';'
-[21 Dez 2011 00:29:40] INFO derby.system.home= 'D:\Programming\WebRatio WorkSpace\.metadata\.plugins\com.webratio.commons.db\derby'
-[21 Dez 2011 00:29:40] INFO password= 'LAroche555'
-[21 Dez 2011 00:29:40] INFO url= 'jdbc:mysql://localhost:3306/mwdb'
-[21 Dez 2011 00:29:40] INFO username= 'andre'
-[21 Dez 2011 00:29:40] INFO autoCommit= 'false'
-[21 Dez 2011 00:29:40] INFO outputLogPath= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.xml.log'
-[21 Dez 2011 00:29:40] INFO driverClass= 'com.mysql.jdbc.Driver'
-[21 Dez 2011 00:29:40] INFO encoding= ''
-[21 Dez 2011 00:29:40] INFO eventSocketPort= '55544'
-[21 Dez 2011 00:29:40] INFO sqlScript= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.sql'
-[21 Dez 2011 00:29:40] INFO ================================================================================
-[21 Dez 2011 00:29:40] INFO Connecting to the Database...
-[21 Dez 2011 00:29:41] INFO Database connection estabilished
-[21 Dez 2011 00:29:41] INFO transaction isolation: 4
-[21 Dez 2011 00:29:41] DEBUG ================================================================================
-[21 Dez 2011 00:29:41] DEBUG Executing SQL script file: D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.sql
-[21 Dez 2011 00:29:41] DEBUG Executing statement:  alter table `avaliacao`   add index fk_avaliacao_user (`user_oid`), add constraint fk_avaliacao_user foreign key (`user_oid`) references `user` (`oid_user`)
-[21 Dez 2011 00:29:42] DEBUG Executing statement:    alter table `avaliacao`   add index fk_avaliacao_miniatura (`mini_oid`), add constraint fk_avaliacao_miniatura foreign key (`mini_oid`) references `miniatura` (`oid_mini`)
-[21 Dez 2011 00:29:42] DEBUG ================================================================================
-[21 Dez 2011 00:29:42] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
-[21 Dez 2011 00:29:42] INFO Database connection closed
-[21 Dez 2011 00:29:42] DEBUG Total time: 1683 milliseconds
+[18 Jan 2012 12:29:12] DEBUG Executing SQL script
+[18 Jan 2012 12:29:12] INFO ================================================================================
+[18 Jan 2012 12:29:12] INFO outputPath= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.xml'
+[18 Jan 2012 12:29:12] INFO onError= 'continue'
+[18 Jan 2012 12:29:12] INFO statementSeparator= ';'
+[18 Jan 2012 12:29:12] INFO derby.system.home= 'D:\Programming\WebRatio WorkSpace\.metadata\.plugins\com.webratio.commons.db\derby'
+[18 Jan 2012 12:29:12] INFO password= 'LAroche555'
+[18 Jan 2012 12:29:12] INFO url= 'jdbc:mysql://localhost:3306/mwdb'
+[18 Jan 2012 12:29:12] INFO username= 'andre'
+[18 Jan 2012 12:29:12] INFO autoCommit= 'false'
+[18 Jan 2012 12:29:12] INFO outputLogPath= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.xml.log'
+[18 Jan 2012 12:29:12] INFO driverClass= 'com.mysql.jdbc.Driver'
+[18 Jan 2012 12:29:12] INFO encoding= ''
+[18 Jan 2012 12:29:12] INFO eventSocketPort= '50839'
+[18 Jan 2012 12:29:12] INFO sqlScript= 'D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.sql'
+[18 Jan 2012 12:29:12] INFO ================================================================================
+[18 Jan 2012 12:29:12] INFO Connecting to the Database...
+[18 Jan 2012 12:29:13] INFO Database connection estabilished
+[18 Jan 2012 12:29:13] INFO transaction isolation: 4
+[18 Jan 2012 12:29:13] DEBUG ================================================================================
+[18 Jan 2012 12:29:13] DEBUG Executing SQL script file: D:\Programming\WebRatio WorkSpace\MWDb\.Temp~\UpdateSQL.sql
+[18 Jan 2012 12:29:13] DEBUG Executing statement:  alter table `miniatura`  add column  `thumb`  varchar(255)
+[18 Jan 2012 12:29:13] DEBUG ================================================================================
+[18 Jan 2012 12:29:13] DEBUG SQL SCRIPT SUCCESSFULLY EXECUTED
+[18 Jan 2012 12:29:13] INFO Database connection closed
+[18 Jan 2012 12:29:13] DEBUG Total time: 1293 milliseconds

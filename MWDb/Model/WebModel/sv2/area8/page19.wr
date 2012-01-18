@@ -1,38 +1,28 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area8#page19" name="Gest&#227;o de Coment&#225;rios">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="90" gr:y="0" id="sv2#area8#page19" name="Gest&#227;o">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area8#page19#pwu9" name="Coment&#225;rios" sortable="true" checkable="false" useCountQuery="false" entity="ent7" displayAttributes="rel6#role11.rel4#role8.ent5#att12 rel6#role11.rel5#role10.ent6#att14 rel6#role11.rel2#role4.rel1#role2.ent1#att2 rel6#role11.rel2#role4.ent2#att4 ent7#att25 ent7#att20 rel7#role13.userName ent7#att22" sortHistorySize="1" blockFactor="10" blockWindow="10" linkOrder="sv2#area8#page19#pwu9#ln29 sv2#area8#page19#pwu9#ln34">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area8#page19#pwu9" name="Coment&#225;rios" sortable="true" checkable="false" useCountQuery="false" entity="ent7" displayAttributes="rel7#role13.userName ent7#att25 ent7#att20 ent7#att22" sortHistorySize="1" blockFactor="10" blockWindow="10" linkOrder="sv2#area8#page19#pwu9#ln34 sv2#area8#page19#pwu9#ln65 sv2#area8#page19#pwu9#ln67">
       <SortAttribute attribute="ent7#att20" order="ascending"/>
       <SortAttribute attribute="rel7#role13.userName" order="ascending"/>
       <SortAttribute attribute="ent7#att19" order="ascending"/>
-      <Link id="sv2#area8#page19#pwu9#ln29" name="Editar" to="sv2#area8#page19#enu11" type="normal" validate="true">
-        <LinkParameter id="sv2#area8#page19#pwu9#ln29#par62" name="oid_oid" source="data[].ent7#att19" target="sv2#area8#page19#enu11#fld26_slot"/>
-        <LinkParameter id="sv2#area8#page19#pwu9#ln29#par63" name="Publicado_Publicado" source="data[].ent7#att22" target="sv2#area8#page19#enu11#fld6_slot"/>
-      </Link>
       <Link id="sv2#area8#page19#pwu9#ln34" name="Apagar" to="sv2#area8#dlu5" automaticCoupling="true" type="normal" validate="true"/>
-    </PowerIndexUnit>
-    <EntryUnit gr:x="136" gr:y="6" id="sv2#area8#page19#enu11" name="EditarPublicado" linkOrder="sv2#area8#page19#enu11#ln33">
-      <Field id="sv2#area8#page19#enu11#fld6" name="Publicado" type="boolean" modifiable="true" preloaded="true"/>
-      <Field id="sv2#area8#page19#enu11#fld26" name="oid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
-      <Link id="sv2#area8#page19#enu11#ln33" name="Guardar" to="sv2#area8#mfu5" type="normal" validate="true">
-        <LinkParameter id="sv2#area8#page19#enu11#ln33#par64" name="Publicado_Publicado" source="sv2#area8#page19#enu11#fld6" target="sv2#area8#mfu5.ent7#att22"/>
-        <LinkParameter id="sv2#area8#page19#enu11#ln33#par65" name="oid_KeyCondition16 [oid]" source="sv2#area8#page19#enu11#fld26" target="sv2#area8#mfu5#su23#kcond16.ent7#att19"/>
+      <Link id="sv2#area8#page19#pwu9#ln65" name="Detalhes" to="sv2#area8#page23#dau14" automaticCoupling="true" type="normal" validate="true"/>
+      <Link id="sv2#area8#page19#pwu9#ln67" name="Publicar" to="sv2#area8#mfu5" type="normal" validate="true">
+        <LinkParameter id="sv2#area8#page19#pwu9#ln67#par97" name="oid_KeyCondition16 [oid]" source="data[].ent7#att19" target="sv2#area8#mfu5#su23#kcond16.ent7#att19"/>
+        <LinkParameter id="sv2#area8#page19#pwu9#ln67#par98" name="Publicado_Publicado" source="data[].ent7#att22" target="sv2#area8#mfu5.ent7#att22"/>
       </Link>
-    </EntryUnit>
+    </PowerIndexUnit>
   </ContentUnits>
   <layout:Grid>
     <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv2#area8#page19#pwu9">
-          <layout:Attribute attribute="rel6#role11.rel4#role8.ent5#att12"/>
-          <layout:Attribute attribute="rel6#role11.rel5#role10.ent6#att14"/>
-          <layout:Attribute attribute="rel6#role11.rel2#role4.rel1#role2.ent1#att2"/>
-          <layout:Attribute attribute="rel6#role11.rel2#role4.ent2#att4"/>
-          <layout:Attribute attribute="ent7#att25"/>
-          <layout:Attribute attribute="ent7#att20"/>
-          <layout:Attribute attribute="rel7#role13.userName"/>
+          <layout:Attribute attribute="rel7#role13.userName" label="Utilizador"/>
+          <layout:Attribute attribute="ent7#att25" label="Coment&#225;rio"/>
+          <layout:Attribute attribute="ent7#att20" label="Data"/>
           <layout:Attribute attribute="ent7#att22"/>
-          <layout:Link link="sv2#area8#page19#pwu9#ln29"/>
           <layout:Link link="sv2#area8#page19#pwu9#ln34"/>
+          <layout:Link link="sv2#area8#page19#pwu9#ln65"/>
+          <layout:Link link="sv2#area8#page19#pwu9#ln67"/>
           <layout:Link link="sv2#area8#page19#pwu9ent7#att20"/>
           <layout:Link link="sv2#area8#page19#pwu9rel7#role13$userName"/>
           <layout:Link link="sv2#area8#page19#pwu9First"/>
@@ -42,12 +32,7 @@
           <layout:Link link="sv2#area8#page19#pwu9Last"/>
         </layout:Unit>
       </layout:Cell>
-      <layout:Cell>
-        <layout:Unit unitId="sv2#area8#page19#enu11">
-          <layout:Field field="sv2#area8#page19#enu11#fld6"/>
-          <layout:Link link="sv2#area8#page19#enu11#ln33"/>
-        </layout:Unit>
-      </layout:Cell>
+      <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
     <layout:Row>

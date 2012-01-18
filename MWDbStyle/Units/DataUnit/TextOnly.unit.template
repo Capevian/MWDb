@@ -1,0 +1,9 @@
+#?delimiters [%, %], [%=, %]
+[%
+	setHTMLOutput()
+	def attribute = unit.selectSingleNode("layout:Attribute")
+	def link = unit.selectSingleNode("layout:Link")
+%]
+
+<p><wr:Value context="attribute"/></p>
+<p><wr:Link context="link"/></p>

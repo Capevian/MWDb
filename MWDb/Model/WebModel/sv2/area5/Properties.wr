@@ -1,21 +1,21 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="574" gr:y="40" id="sv2#area5" name="Gest&#227;o de Modelos" landmark="true" defaultPage="sv2#area5#page9" landmarks="sv2#area5#page12 sv2#area5#page9 sv2#area5#page13">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="602" gr:y="32" id="sv2#area5" name="Modelos" landmark="true" defaultPage="sv2#area5#page9" landmarks="sv2#area5#page9 sv2#area5#page12">
   <OperationUnits>
-    <CreateUnit gr:x="316" gr:y="26" id="sv2#area5#cru2" name="NovoModelo" entity="ent2">
-      <OKLink id="sv2#area5#cru2#oln4" name="Modelo Criado" to="sv2#area5#cru9" automaticCoupling="true" gr:bendpoints="78,-11,2,-117;99,23,23,-83"/>
+    <CreateUnit gr:x="350" gr:y="40" id="sv2#area5#cru2" name="NovoModelo" entity="ent2">
+      <KOLink id="sv2#area5#cru2#kln2" name="KOLink2" to="sv2#area5#page9" automaticCoupling="true" gr:bendpoints="-93,-17,181,-12"/>
+      <OKLink id="sv2#area5#cru2#oln15" name="OKLink5" to="sv2#area5#page9#dau5" automaticCoupling="true"/>
     </CreateUnit>
-    <ModifyUnit gr:x="418" gr:y="402" id="sv2#area5#mfu1" name="AlteraModelo" entity="ent2">
+    <ModifyUnit gr:x="400" gr:y="270" id="sv2#area5#mfu1" name="AlteraModelo" entity="ent2">
       <Selector id="sv2#area5#mfu1#su16" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area5#mfu1#su16#kcond11" name="KeyCondition11" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv2#area5#mfu1#oln7" name="OKLink7" to="sv2#area5#page12#dau6" automaticCoupling="true"/>
       <KOLink id="sv2#area5#mfu1#kln3" name="KOLink3" to="sv2#area5#page12" automaticCoupling="true"/>
+      <OKLink id="sv2#area5#mfu1#oln7" name="OKLink7" to="sv2#area5#page8#dau16" automaticCoupling="true"/>
     </ModifyUnit>
-    <DeleteUnit gr:x="238" gr:y="642" id="sv2#area5#dlu2" name="Apagar Modelo" entity="ent2">
+    <DeleteUnit gr:x="280" gr:y="550" id="sv2#area5#dlu2" name="Apagar Modelo" entity="ent2">
       <Selector id="sv2#area5#dlu2#su18" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area5#dlu2#su18#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv2#area5#dlu2#oln8" name="OKLink8" to="sv2#area5#page13" automaticCoupling="true"/>
+      <OKLink id="sv2#area5#dlu2#oln8" name="OKLink8" to="sv2#area5#page12" automaticCoupling="true"/>
     </DeleteUnit>
-    <CreateUnit gr:x="388" gr:y="132" id="sv2#area5#cru9" name="FotosModelo" entity="ent10" bulk="true"/>
   </OperationUnits>
 </Area>

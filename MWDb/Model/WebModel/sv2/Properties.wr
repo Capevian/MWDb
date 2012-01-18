@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Admin View" protected="false" landmarks="sv2#area4 sv2#area5 sv2#area6 sv2#area7 sv2#area8" homePage="sv2#area4#page3">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Admin View" protected="false" landmarks="sv2#area4 sv2#area5 sv2#area7 sv2#area6 sv2#area8" homePage="sv2#area4#page3" layout:style="MWDbStyle" layout:gridLayout="WRDefault/Default">
   <OperationUnits>
     <CreateUnit gr:x="400" gr:y="110" id="sv2#cru1" name="NovaMarca" entity="ent1">
       <KOLink id="sv2#cru1#kln1" name="KOLink1" to="sv2#area4#page3" automaticCoupling="true" gr:bendpoints="-95,14,108,15"/>

@@ -1,0 +1,9 @@
+#?delimiters [%, %], [%=, %]
+
+  <wr:LayoutParameter name="color" label="Frame Color" type="enum" values="grey|blue|yellow|green|red"/>
+  [%
+	setHTMLOutput()
+	def color = params["color"]
+  %]
+  <div class="middle-column-box-title-[%= color %]"><wr:FrameTitle/></div>
+  <wr:FrameContent/>

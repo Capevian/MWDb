@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="270" id="sv2#area4#page7" name="Editar Marca" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="300" id="sv2#area4#page7" name="Editar" landmark="true">
   <ContentUnits>
-    <EntryUnit gr:x="148" gr:y="3" id="sv2#area4#page7#enu2" name="Editar Marca" linkOrder="sv2#area4#page7#enu2#ln12">
+    <EntryUnit gr:x="120" gr:y="120" id="sv2#area4#page7#enu2" name="Editar Marca" linkOrder="sv2#area4#page7#enu2#ln12">
       <Field id="sv2#area4#page7#enu2#fld9" name="oid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
       <Field id="sv2#area4#page7#enu2#fld10" name="NomeMarca" type="string" modifiable="true" preloaded="true"/>
       <Field id="sv2#area4#page7#enu2#fld11" name="Logo" type="blob" modifiable="true" preloaded="true"/>
@@ -12,7 +12,7 @@
         <LinkParameter id="sv2#area4#page7#enu2#ln12#par22" name="oid_KeyCondition4 [oid]" source="sv2#area4#page7#enu2#fld9" target="sv2#area4#mfu2#su10#kcond4.ent1#att1"/>
       </Link>
     </EntryUnit>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area4#page7#pwu1" name="Marcas" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2" blockFactor="10" blockWindow="10" linkOrder="sv2#area4#page7#pwu1#ln9" sortHistorySize="1">
+    <PowerIndexUnit gr:x="130" gr:y="210" id="sv2#area4#page7#pwu1" name="Marcas" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att2" blockFactor="10" blockWindow="10" linkOrder="sv2#area4#page7#pwu1#ln9 sv2#area4#page7#pwu1#ln48" sortHistorySize="1">
       <SortAttribute attribute="ent1#att2" order="ascending"/>
       <Link id="sv2#area4#page7#pwu1#ln9" name="Editar" to="sv2#area4#page7#enu2" type="normal" validate="true">
         <LinkParameter id="sv2#area4#page7#pwu1#ln9#par10" name="Logo_Logo" source="data[].ent1#att18" target="sv2#area4#page7#enu2#fld11_slot"/>
@@ -21,15 +21,16 @@
         <LinkParameter id="sv2#area4#page7#pwu1#ln9#par13" name="MarcaToTipo.oid_Tipo - Preselection" source="data[].rel14#role28_ent4#att9" target="sv2#area4#page7#enu2#sfld5_presel"/>
       </Link>
       <DefaultSortAttribute attribute="ent1#att2" order="ascending"/>
+      <Link id="sv2#area4#page7#pwu1#ln48" name="Apagar" to="sv2#area4#dlu1" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <SelectorUnit gr:x="78" gr:y="103" id="sv2#area4#page7#seu1" name="Tipos" entity="ent4">
+    <SelectorUnit gr:x="0" gr:y="120" id="sv2#area4#page7#seu1" name="Tipos" entity="ent4">
       <SortAttribute attribute="ent4#att10" order="ascending"/>
       <Link id="sv2#area4#page7#seu1#ln11" name="Link11" to="sv2#area4#page7#enu2" type="transport" validate="true">
         <LinkParameter id="sv2#area4#page7#seu1#ln11#par17" name="Descricao_Tipo [label]" source="ent4#att10Array" target="sv2#area4#page7#enu2#sfld5_label"/>
         <LinkParameter id="sv2#area4#page7#seu1#ln11#par18" name="oid_Tipo [output]" source="ent4#att9Array" target="sv2#area4#page7#enu2#sfld5_output"/>
       </Link>
     </SelectorUnit>
-    <DataUnit gr:x="176" gr:y="115" id="sv2#area4#page7#dau3" name="Marca Alterada" entity="ent1" displayAll="true">
+    <DataUnit gr:x="100" gr:y="0" id="sv2#area4#page7#dau3" name="Marca Alterada" entity="ent1" displayAttributes="ent1#att2 ent1#att18 rel14#role28.ent4#att10">
       <Selector id="sv2#area4#page7#dau3#su7" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area4#page7#dau3#su7#kcond2" name="KeyCondition2" predicate="in" implied="false"/>
       </Selector>
@@ -38,17 +39,10 @@
   <layout:Grid>
     <layout:Row>
       <layout:Cell>
-        <layout:Unit unitId="sv2#area4#page7#enu2">
-          <layout:Field field="sv2#area4#page7#enu2#fld10"/>
-          <layout:Field field="sv2#area4#page7#enu2#fld11"/>
-          <layout:Field field="sv2#area4#page7#enu2#sfld5"/>
-          <layout:Link link="sv2#area4#page7#enu2#ln12"/>
-        </layout:Unit>
-      </layout:Cell>
-      <layout:Cell>
         <layout:Unit unitId="sv2#area4#page7#pwu1">
-          <layout:Attribute attribute="ent1#att2"/>
+          <layout:Attribute attribute="ent1#att2" label="Nome"/>
           <layout:Link link="sv2#area4#page7#pwu1#ln9"/>
+          <layout:Link link="sv2#area4#page7#pwu1#ln48"/>
           <layout:Link link="sv2#area4#page7#pwu1ent1#att2"/>
           <layout:Link link="sv2#area4#page7#pwu1First"/>
           <layout:Link link="sv2#area4#page7#pwu1Previous"/>
@@ -59,13 +53,22 @@
       </layout:Cell>
       <layout:Cell>
         <layout:Unit unitId="sv2#area4#page7#dau3">
-          <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att18"/>
+          <layout:Attribute attribute="ent1#att2" label="Nome"/>
+          <layout:Attribute attribute="ent1#att18" label="Log&#243;tipo"/>
+          <layout:Attribute attribute="rel14#role28.ent4#att10" label="Tipo"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell/>
+      <layout:Cell>
+        <layout:Unit unitId="sv2#area4#page7#enu2">
+          <layout:Field field="sv2#area4#page7#enu2#fld10" label="Nome"/>
+          <layout:Field field="sv2#area4#page7#enu2#fld11" label="Log&#243;tipo"/>
+          <layout:Field field="sv2#area4#page7#enu2#sfld5"/>
+          <layout:Link link="sv2#area4#page7#enu2#ln12"/>
+        </layout:Unit>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>

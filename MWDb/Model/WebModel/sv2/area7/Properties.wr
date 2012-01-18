@@ -1,4 +1,4 @@
-<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="42" gr:y="782" id="sv2#area7" name="Gest&#227;o de Construtores" landmark="true" defaultPage="sv2#area7#page15" landmarks="sv2#area7#page15 sv2#area7#page16 sv2#area7#page11">
+<Area xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="42" gr:y="782" id="sv2#area7" name="Construtores" landmark="true" defaultPage="sv2#area7#page15" landmarks="sv2#area7#page15 sv2#area7#page16">
   <OperationUnits>
     <ModifyUnit id="sv2#area7#mfu4" name="EditaConstrutor" gr:x="350" gr:y="290" entity="ent6">
       <Selector id="sv2#area7#mfu4#su22" defaultPolicy="fill" booleanOperator="and">
@@ -7,11 +7,11 @@
       <OKLink id="sv2#area7#mfu4#oln10" name="OKLink10" to="sv2#area7#page16#dau8" automaticCoupling="true"/>
       <KOLink id="sv2#area7#mfu4#kln5" name="KOLink5" to="sv2#area7#page16" automaticCoupling="true"/>
     </ModifyUnit>
-    <DeleteUnit gr:x="280" gr:y="480" id="sv2#area7#dlu3" name="Apagar Construtor" entity="ent6">
+    <DeleteUnit gr:x="70" gr:y="490" id="sv2#area7#dlu3" name="Apagar Construtor" entity="ent6">
       <Selector id="sv2#area7#dlu3#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area7#dlu3#su13#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv2#area7#dlu3#oln6" name="OKLink6" to="sv2#area7#page11" automaticCoupling="true"/>
+      <OKLink id="sv2#area7#dlu3#oln6" name="OKLink6" to="sv2#area7#page16" automaticCoupling="true"/>
     </DeleteUnit>
   </OperationUnits>
 </Area>

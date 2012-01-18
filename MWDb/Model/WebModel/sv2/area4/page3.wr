@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area4#page3" name="Nova Marca" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="0" id="sv2#area4#page3" name="Adicionar" landmark="true">
   <ContentUnits>
     <EntryUnit gr:x="110" gr:y="10" id="sv2#area4#page3#enu1" name="Nova Marca" linkOrder="sv2#area4#page3#enu1#ln7">
       <Link id="sv2#area4#page3#enu1#ln7" name="Guardar" to="sv2#cru1" type="normal" validate="true">
@@ -18,7 +18,7 @@
         <LinkParameter id="sv2#area4#page3#seu2#ln10#par23" name="oid_Tipo [output]" source="ent4#att9Array" target="sv2#area4#page3#enu1#sfld2_output"/>
       </Link>
     </SelectorUnit>
-    <DataUnit gr:x="115" gr:y="118" id="sv2#area4#page3#dau4" name="Nova Marca" entity="ent1" displayAttributes="ent1#att1 ent1#att2 ent1#att18">
+    <DataUnit gr:x="84" gr:y="114" id="sv2#area4#page3#dau4" name="Marca Adicionada" entity="ent1" displayAttributes="ent1#att2 ent1#att18 rel14#role28.ent4#att10">
       <Selector id="sv2#area4#page3#dau4#su3" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area4#page3#dau4#su3#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
       </Selector>
@@ -29,16 +29,16 @@
       <layout:Cell>
         <layout:Unit unitId="sv2#area4#page3#enu1">
           <layout:Link link="sv2#area4#page3#enu1#ln7"/>
-          <layout:Field field="sv2#area4#page3#enu1#fld2"/>
-          <layout:Field field="sv2#area4#page3#enu1#fld3"/>
+          <layout:Field field="sv2#area4#page3#enu1#fld2" label="Nome"/>
+          <layout:Field field="sv2#area4#page3#enu1#fld3" label="Log&#243;tipo"/>
           <layout:Field field="sv2#area4#page3#enu1#sfld2"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell>
         <layout:Unit unitId="sv2#area4#page3#dau4">
-          <layout:Attribute attribute="ent1#att1"/>
-          <layout:Attribute attribute="ent1#att2"/>
-          <layout:Attribute attribute="ent1#att18"/>
+          <layout:Attribute attribute="ent1#att2" label="Nome"/>
+          <layout:Attribute attribute="ent1#att18" label="Log&#243;tipo"/>
+          <layout:Attribute attribute="rel14#role28.ent4#att10" label="Tipo"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

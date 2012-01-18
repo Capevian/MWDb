@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="220" id="sv2#area7#page16" name="Editar Construtor" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="0" gr:y="220" id="sv2#area7#page16" name="Editar" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area7#page16#pwu5" name="Construtores" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att14" sortHistorySize="1" blockFactor="10" blockWindow="10" linkOrder="sv2#area7#page16#pwu5#ln23">
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv2#area7#page16#pwu5" name="Construtores" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att14" sortHistorySize="1" blockFactor="10" blockWindow="10" linkOrder="sv2#area7#page16#pwu5#ln23 sv2#area7#page16#pwu5#ln59">
       <SortAttribute attribute="ent6#att14" order="ascending"/>
       <DefaultSortAttribute attribute="ent6#att14" order="ascending"/>
       <Link id="sv2#area7#page16#pwu5#ln23" name="Editar" to="sv2#area7#page16#enu10" type="normal" validate="true">
@@ -9,6 +9,7 @@
         <LinkParameter id="sv2#area7#page16#pwu5#ln23#par51" name="oid_oid" source="data[].ent6#att13" target="sv2#area7#page16#enu10#fld22_slot"/>
         <LinkParameter id="sv2#area7#page16#pwu5#ln23#par52" name="Website_Website" source="data[].ent6#att16" target="sv2#area7#page16#enu10#fld25_slot"/>
       </Link>
+      <Link id="sv2#area7#page16#pwu5#ln59" name="Apagar" to="sv2#area7#dlu3" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
     <EntryUnit gr:x="164" gr:y="4" id="sv2#area7#page16#enu10" name="Editar Construtor" linkOrder="sv2#area7#page16#enu10#ln25">
       <Field id="sv2#area7#page16#enu10#fld22" name="oid" type="integer" modifiable="false" preloaded="true" hidden="true"/>
@@ -23,7 +24,7 @@
         <LinkParameter id="sv2#area7#page16#enu10#ln25#par57" name="Website_Website" source="sv2#area7#page16#enu10#fld25" target="sv2#area7#mfu4.ent6#att16"/>
       </Link>
     </EntryUnit>
-    <DataUnit gr:x="174" gr:y="84" id="sv2#area7#page16#dau8" name="Construtor" entity="ent6" displayAttributes="ent6#att13 ent6#att14 ent6#att15 ent6#att16">
+    <DataUnit gr:x="174" gr:y="84" id="sv2#area7#page16#dau8" name="Construtor" entity="ent6" displayAttributes="ent6#att14 ent6#att15 ent6#att16">
       <Selector id="sv2#area7#page16#dau8#su20" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv2#area7#page16#dau8#su20#kcond15" name="KeyCondition15" predicate="in" implied="false"/>
       </Selector>
@@ -33,8 +34,9 @@
     <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv2#area7#page16#pwu5">
-          <layout:Attribute attribute="ent6#att14"/>
+          <layout:Attribute attribute="ent6#att14" label="Nome"/>
           <layout:Link link="sv2#area7#page16#pwu5#ln23"/>
+          <layout:Link link="sv2#area7#page16#pwu5#ln59"/>
           <layout:Link link="sv2#area7#page16#pwu5ent6#att14"/>
           <layout:Link link="sv2#area7#page16#pwu5First"/>
           <layout:Link link="sv2#area7#page16#pwu5Previous"/>
@@ -43,30 +45,29 @@
           <layout:Link link="sv2#area7#page16#pwu5Last"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell>
         <layout:Unit unitId="sv2#area7#page16#enu10">
-          <layout:Field field="sv2#area7#page16#enu10#fld23"/>
-          <layout:Field field="sv2#area7#page16#enu10#fld24"/>
+          <layout:Field field="sv2#area7#page16#enu10#fld23" label="Nome"/>
+          <layout:Field field="sv2#area7#page16#enu10#fld24" label="Log&#243;tipo"/>
           <layout:Field field="sv2#area7#page16#enu10#fld25"/>
           <layout:Link link="sv2#area7#page16#enu10#ln25"/>
         </layout:Unit>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell>
-        <layout:Unit unitId="sv2#area7#page16#dau8">
-          <layout:Attribute attribute="ent6#att13"/>
-          <layout:Attribute attribute="ent6#att14"/>
-          <layout:Attribute attribute="ent6#att15"/>
+        <layout:Unit unitId="sv2#area7#page16#dau8" label="Construtor alterado com sucesso:">
+          <layout:Attribute attribute="ent6#att14" label="Nome"/>
+          <layout:Attribute attribute="ent6#att15" label="Log&#243;tipo"/>
           <layout:Attribute attribute="ent6#att16"/>
         </layout:Unit>
       </layout:Cell>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
-      <layout:Cell/>
-      <layout:Cell/>
-    </layout:Row>
-    <layout:Row>
-      <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
