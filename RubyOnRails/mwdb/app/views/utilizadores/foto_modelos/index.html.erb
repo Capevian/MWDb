@@ -1,0 +1,13 @@
+<h1>Todas as Fotos para <%= @modelo.nome%> (<%= @modelo.ano %>)</h1>
+
+
+
+<ul>
+  <% @foto_modelos.each do |foto| %>
+    <%= image_tag("/application/code_image_foto_modelos?id=#{foto.id}", :alt => "Image", :size => "220x170" ) %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+<%= link_to "Voltar atrás" , utilizadores_modelo_path(@modelo) %>

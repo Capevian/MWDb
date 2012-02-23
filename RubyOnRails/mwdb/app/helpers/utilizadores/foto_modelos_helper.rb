@@ -1,0 +1,2 @@
+module Utilizadores::FotoModelosHelper
+end

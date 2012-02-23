@@ -1,0 +1,17 @@
+<h1>Entrar no MWDb</h1>
+
+<%= form_for(:sessions , :url => sessions_path) do |f| %>
+    <div class="field">
+      <%= f.label :username %><br/>
+      <%= f.text_field :username %>
+    </div>
+    <div class="field">
+      <%= f.label :password %><br/>
+      <%= f.password_field :password %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Entrar" %>
+    </div>
+<% end %>
+
+<p>Novo Utilizador? <%= link_to "Regista-te agora", signup_path %></p>

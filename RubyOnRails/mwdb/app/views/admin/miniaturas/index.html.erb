@@ -1,0 +1,26 @@
+<h1>Todas as Miniaturas</h1>
+
+<%= will_paginate %>
+
+
+<div class="listas">
+  <% @miniaturas.each do |miniatura| %>
+      <div>
+        <% @nome = Modelo.find_by_id(miniatura.modelo_id).nome %>
+        <%= @nome %><br/>
+        <%= image_tag("/application/code_image_miniaturas?id=#{miniatura.id}", :alt => "Image", :size => "150x120" ) %>
+        <%= link_to "Editar" , edit_admin_miniatura_path(miniatura) %> |
+        <%= link_to "Remover", admin_miniatura_path(miniatura), :method => :delete %> |
+        <%= link_to "Adicionar Fotos" , new_admin_miniatura_foto_miniatura_path(miniatura) %> |
+        <%= link_to "Remover Fotos" , admin_miniatura_foto_miniaturas_path(miniatura)%>
+      </div>
+  <% end %>
+</div>
+
+<%= will_paginate %>
+
+<br style="clear: both;"/>
+<br style="clear: both;"/>
+
+
+<%= link_to "Voltar a Administração" , admin_path %>

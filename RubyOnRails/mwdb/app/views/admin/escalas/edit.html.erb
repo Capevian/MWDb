@@ -1,0 +1,15 @@
+<h1>Editar Escala</h1>
+
+
+<%= form_for(@escala , :url => admin_escala_path(@escala)) do |f| %>
+    <%= render 'shared/error_messages', :object=> f.object %>
+    <div class="field">
+      <%= f.label :descricao %><br/>
+      <%= f.text_field :descricao %>
+    </div>
+    <br/>
+    <div class="actions">
+      <%= f.submit "Actualizar" %>
+    </div>
+
+<% end %>

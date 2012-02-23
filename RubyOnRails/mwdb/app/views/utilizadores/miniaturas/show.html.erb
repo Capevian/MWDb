@@ -1,0 +1,102 @@
+<div id="middle-column-mini">
+<h1 class="left-navheader-first"><%= @marca %> <%= @modelo %> - (<%= @ano %>) </h1>
+
+
+<div class="plain DataUnit">
+<table>
+  <tr>
+    <th class="header">CONSTRUTOR</th>
+    <td class="value"><%= @construtor %></td>
+  </tr>
+  <tr>
+    <th class="header">MARCA</th>
+    <td class="value"><%= @marca %> </td>
+  </tr>
+  <tr>
+    <th class="header">MODELO</th>
+    <td class="value"><%= @modelo %></td>
+  </tr>
+  <tr>
+    <th class="header">ANO</th>
+    <td class="value"><%= @ano %></td>
+  </tr>
+  <tr>
+    <th class="header">ESCALA</th>
+    <td class="value"><%= @escala %></td>
+  </tr>
+  <tr>
+    <th class="header">FOTO</th>
+    <td class="value"><%= image_tag("/application/code_image_miniaturas?id=#{@miniatura.id}", :alt => "Image", :size => "270x200" ) %></td>
+  </tr>
+  <tr>
+    <th class="header">AVALIAÇÃO MÉDIA</th>
+    <td class="value"><%= @media_avaliacoes %></td>
+  </tr>
+  <tr>
+    <th class="header">DESCRIÇÃO</th>
+    <td class="value"><%= @miniatura.descricao %></td>
+  </tr>
+</table>
+</div>
+<% if !current_user.has_commented?(@miniatura.id) %>
+<div class="middle-column-box-title-destaque">Deixe o seu comentário</div>
+<div class="plain">
+
+  <%= form_for @comentario , :url => utilizadores_comentarios_path(@comentario.id) do |f| %>
+     <%= f.hidden_field :user_id %>
+     <%= f.hidden_field :miniatura_id %>
+     <div class="field">
+        <%= f.label "" %>
+        <%= f.text_area :texto %>
+     </div>
+     <div class="actions">
+        <%= f.submit "Comentar" %>
+     </div>
+  <% end %>
+</div>
+<% end %>
+
+
+<% if !current_user.has_evaluated?(@miniatura.id) %>
+<div class="middle-column-box-title-destaque">Avalie esta Miniatura</div>
+  <div class="plain">
+    <%= form_for @avaliacao ,:url => utilizadores_avaliacaos_path(@avaliacao.id) do |f|  %>
+        <%= f.hidden_field :user_id %>
+        <%= f.hidden_field :miniatura_id %>
+        <%= f.select(:avaliacao , [['1', 1], ['2', 2],['3',3],['4',4],['5',5]]) %>
+        <%= f.submit "Avaliar" %>
+    <% end %>
+  </div>
+<% end %>
+
+<div class="middle-column-box-title-destaque">Comentários</div>
+<div class="plain">
+  <table>
+    <% @comentarios.each do |com| %>
+       <tr><%= User.find_by_id(com.user_id).username %> : <%= com.texto %> </tr> <br/><br/>
+    <% end %>
+  </table>
+</div>
+
+
+<br/>
+<%= link_to "Mais fotos" , utilizadores_miniatura_foto_miniaturas_path(@miniatura)%>
+</div>
+
+<div id="right-column-mini">
+  <div class="middle-column-box-title-destaque-semf">
+     Mais Fotografias
+  </div>
+  <div class="plain">
+    <table>
+      <% @fotos.each do |foto| %>
+          <tr>
+            <td>
+             <%= image_tag("/application/code_image_foto_miniaturas?id=#{foto.id}", :alt => "Image", :size => "250x200" ) %>
+            </td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+  <%= will_paginate @fotos%>
+</div>

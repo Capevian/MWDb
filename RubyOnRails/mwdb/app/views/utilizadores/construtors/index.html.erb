@@ -1,0 +1,16 @@
+<h1>Construtores de Miniaturas</h1>
+
+<%= will_paginate %>
+
+<div class="listas">
+   <% @construtors.each do |construtor| %>
+    <div>
+        <%= link_to utilizadores_construtor_miniaturas_path(construtor.id) do%>
+          <%= image_tag("/application/code_image?id=#{construtor.id}", :alt => "Image", :size => "150x90" ) %>
+          <span class="listasDesc"><%= construtor.nome %></span>
+          <!--<%= link_to "Ver Miniaturas" , utilizadores_construtor_miniaturas_path(construtor.id) %>-->
+         <% end %>
+    </div>
+  <% end %>
+</div>
+<%= will_paginate %>

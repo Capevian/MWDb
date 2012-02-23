@@ -1,0 +1,23 @@
+<h1>Editar Marca</h1>
+
+
+<%= form_for(@marca , :url => admin_marca_path(@marca)) do |f| %>
+    <%= render 'shared/error_messages', :object=> f.object %>
+    <div class="field">
+      <%= f.label :nome %><br/>
+      <%= f.text_field :nome %>
+    </div>
+    <div class="field">
+      <%= f.label "Logo (Tamanho Max 500kb)" %> <br/>
+      <%= f.file_field :logo %>
+    </div>
+    <div class="field">
+      <%= f.label "Tipo" %><br/>
+      <%= f.collection_select :tipo_id ,@tipos, :id, :descricao ,{:prompt => true}   %>
+    </div>
+    <br/>
+    <div class="actions">
+      <%= f.submit "Actualizar" %>
+    </div>
+
+<% end %>

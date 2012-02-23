@@ -1,0 +1,15 @@
+<h1>Todas as Escalas Actuais</h1>
+
+<%= will_paginate %>
+
+<ul>
+  <% @escalas.each do |escala| %>
+    <li><%= escala.descricao %></li>
+    <%= link_to "Editar" , edit_admin_escala_path(escala) %>
+    <%= link_to "Remover", admin_escala_path(escala), :method => :delete %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+<%= link_to "Voltar a Administração" , admin_path %>

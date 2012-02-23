@@ -1,0 +1,22 @@
+<h1>Todos os Modelos</h1>
+
+<%= will_paginate %>
+
+
+<div class="listas">
+  <% @modelos.each do |modelo| %>
+      <div>
+        <% @nome = modelo.nome + ' ' + modelo.ano.to_s%>
+        <%= @nome %>
+        <%= image_tag("/application/code_image_modelos?id=#{modelo.id}", :alt => "Image", :size => "130x100" ) %>
+        <%= link_to "Editar" , edit_admin_modelo_path(modelo) %> |
+        <%= link_to "Remover", admin_modelo_path(modelo), :method => :delete %> |
+        <%= link_to "Adicionar Fotos" , new_admin_modelo_foto_modelo_path(modelo) %> |
+        <%= link_to "Remover Fotos" , admin_modelo_foto_modelos_path(modelo)%>
+      </div>
+  <% end %>
+</div>
+
+<%= will_paginate %>
+
+<%= link_to "Voltar a Administração" , admin_path %>

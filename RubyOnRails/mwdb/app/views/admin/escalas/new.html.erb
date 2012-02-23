@@ -1,0 +1,16 @@
+<h1>Nova escala</h1>
+
+<%= form_for(@escala, :url => admin_escalas_path) do |f| %>
+    <%=  render 'shared/error_messages', :object=> f.object %>
+    <div class="field">
+      <%= f.label :descricao %> <br/>
+      <%= f.text_field :descricao %>
+    </div>
+    <br/>
+    <div class="actions">
+      <%= f.submit "Registar" %>
+    </div>
+
+<% end %>
+
+<%= link_to "Voltar a Administração" , admin_path %>

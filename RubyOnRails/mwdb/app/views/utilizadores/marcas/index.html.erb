@@ -1,0 +1,20 @@
+<h1>Marcas</h1>
+
+<%= will_paginate %>
+
+<div class="listas">
+  <% @marcas.each do |marca| %>
+      <div>
+        <%= link_to utilizadores_marca_modelos_path(marca.id) do %>
+            <%= image_tag("/application/code_image_marcas?id=#{marca.id}", :alt => "Image", :size => "150x130" ) %>
+            <span class="listasDesc"><%= marca.nome %></span>
+        <% end %>
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate %>
+
+<br style="clear: both;"/>
+<br style="clear: both;"/>
+<!--<%= link_to "Voltar atrás" ,utilizadores_tipos_path %>-->

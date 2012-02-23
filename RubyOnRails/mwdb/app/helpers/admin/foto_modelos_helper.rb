@@ -1,0 +1,2 @@
+module Admin::FotoModelosHelper
+end

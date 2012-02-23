@@ -1,0 +1,12 @@
+<h1>Todas as Escalas Actuais</h1>
+
+<%= will_paginate %>
+
+<ul>
+  <% @escalas.each do |escala| %>
+    <li><%= escala.descricao %></li>
+    <%= link_to "Ver Miniaturas" ,utilizadores_escala_miniaturas_path(escala.id) %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

@@ -1,0 +1,2 @@
+module Utilizadores::FotoMiniaturasHelper
+end

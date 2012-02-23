@@ -1,0 +1,16 @@
+<h1>Nova Foto</h1>
+
+<%= form_for(@foto_miniatura, :url => admin_miniatura_foto_miniaturas_path ,:html=>{:multipart=>true}) do |f| %>
+    <%=  render 'shared/error_messages', :object=> f.object %>
+    <div class="field">
+      <%= f.label "Foto (Tamanho Max 500kb)" %> <br/>
+      <%= f.file_field :foto %>
+    </div>
+    <br/>
+    <div class="actions">
+      <%= f.submit "Criar" %>
+    </div>
+
+<% end %>
+
+<%= link_to "Voltar a Administração" , admin_path %>

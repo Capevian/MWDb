@@ -1,0 +1,21 @@
+<h1>Todas as Marcas</h1>
+
+<%= will_paginate %>
+
+<div class="listas">
+  <% @marcas.each do |marca| %>
+      <div>
+        <a href="#">
+            <%= image_tag("/application/code_image_marcas?id=#{marca.id}", :alt => "Image", :size => "150x130" ) %>
+            <%= link_to "Editar" , edit_admin_marca_path(marca) %> |
+            <%= link_to "Remover", admin_marca_path(marca), :method => :delete %>
+        </a>
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate %>
+<br style="clear: both;"/>
+
+
+<%= link_to "Voltar a Administração" , admin_path %>

@@ -1,0 +1,26 @@
+<h1>Nova Marca</h1>
+
+<%= form_for(@marca, :url => admin_marcas_path ,:html=>{:multipart=>true}) do |f| %>
+    <%=  render 'shared/error_messages', :object=> f.object %>
+    <div class="field">
+      <%= f.label :nome %> <br/>
+      <%= f.text_field :nome %>
+    </div>
+    <br/>
+    <div class="field">
+      <%= f.label "Logo (Tamanho Max 500kb)" %> <br/>
+      <%= f.file_field :logo %>
+    </div>
+    <br/>
+    <div class="field">
+      <%= f.label "Tipo de Marca" %>
+      <%= f.collection_select :tipo_id ,@tipos, :id, :descricao ,{:prompt => true} %>
+    </div>
+    <br/>
+    <div class="actions">
+      <%= f.submit "Criar" %>
+    </div>
+
+<% end %>
+
+<%= link_to "Voltar a Administração" , admin_path %>

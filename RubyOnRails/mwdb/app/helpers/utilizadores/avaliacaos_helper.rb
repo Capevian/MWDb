@@ -1,0 +1,2 @@
+module Utilizadores::AvaliacaosHelper
+end

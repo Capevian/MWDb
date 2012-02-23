@@ -1,0 +1,13 @@
+<h1>Todas as Fotos para <%= @miniatura.descricao%> </h1>
+
+
+
+<ul>
+  <% @foto_miniaturas.each do |foto| %>
+    <%= image_tag("/application/code_image_foto_miniaturas?id=#{foto.id}", :alt => "Image", :size => "220x170" ) %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+<%= link_to "Voltar atrás" , utilizadores_miniatura_path(@miniatura) %>

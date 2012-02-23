@@ -1,0 +1,41 @@
+<!-- Partial que desenha o cabeçalho-->
+<header>
+  <!-- HEADER -->
+	  <!-- Background -->
+    <div id="header-section">
+
+       <a href="#">
+       		<img id="header-background-left" src="/assets/MWDbStyle/img/img_logo.jpg" alt="HeaderLeft"/>
+       </a>
+       <img id="header-background-right" src="/assets/MWDbStyle/img/img_header.jpg" alt="HeaderRight"/>
+	</div>
+
+    <!-- Navigation -->
+    <div id="header">
+      <ul>
+        <% if signed_in? %>
+          <% if current_user.admin? %>
+              <li><%= link_to "Home", admin_path %></li>
+              <li><%= link_to "Escalas" , admin_escalas_path %></li>
+              <li><%= link_to "Construtores" , admin_construtors_path %></li>
+              <li><%= link_to "Tipos" , admin_tipos_path %></li>
+              <li><%= link_to "Marcas" , admin_marcas_path %></li>
+              <li><%= link_to "Modelos", admin_modelos_path %></li>
+              <li><%= link_to "Miniaturas", admin_miniaturas_path %></li>
+          <% else %>
+            <li><%= link_to "Home", root_path %></li>
+            <!--<li><%= link_to "Escalas", utilizadores_escalas_path %></li>-->
+            <li><%= link_to "Construtores" ,utilizadores_construtors_path %></li>
+            <li><%= link_to "Tipos" , utilizadores_tipos_path %></li>
+            <li><%= link_to "Marcas" , utilizadores_marcas_path %></li>
+            <li><%= link_to "Modelos" , utilizadores_modelos_path %></li>
+            <li><%= link_to "Catálogo" , utilizadores_miniaturas_path %></li>
+          <% end %>
+        <li><%= link_to "Sair"  , signout_path , :method => :delete %></li>
+      <% else %>
+        <li><%= link_to "Entrar" , signin_path %></li>
+      <% end %>
+
+      </ul>
+    </div>
+</header>

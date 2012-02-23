@@ -1,0 +1,21 @@
+<h1>Modelos</h1>
+
+<%= will_paginate %>
+
+<div class="listas">
+  <% @modelos.each do |modelo| %>
+      <div>
+        <%= modelo.nome %> <br/>
+        <%= modelo.ano.to_s %><br/>
+        <%= image_tag("/application/code_image_modelos?id=#{modelo.id}", :alt => "Image", :size => "150x120" ) %>
+        <%= link_to "Detalhes" , utilizadores_modelo_path(modelo)%>
+        <%= link_to "Ver Miniaturas" ,utilizadores_modelo_miniaturas_path(modelo.id) %>
+      </div>
+  <% end %>
+</div>
+
+<%= will_paginate %>
+
+<br style="clear: both;"/>
+<br style="clear: both;"/>
+

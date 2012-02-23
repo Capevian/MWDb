@@ -1,0 +1,18 @@
+<h1>Todos os Construtores</h1>
+
+<%= will_paginate %>
+
+<div class="listas">
+   <% @construtors.each do |construtor| %>
+    <div>
+      <span class="listasDesc"><%= construtor.nome %></span>
+      <%= image_tag("/application/code_image?id=#{construtor.id}", :alt => "Image", :size => "150x90" ) %>
+      <%= link_to "Editar" , edit_admin_construtor_path(construtor) %> |
+      <%= link_to "Remover", admin_construtor_path(construtor), :method => :delete %>
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate %>
+<br style="clear: both;" />
+<%= link_to "Voltar a Administração" , admin_path %>

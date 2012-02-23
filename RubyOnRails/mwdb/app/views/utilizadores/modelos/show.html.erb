@@ -1,0 +1,64 @@
+<div id="middle-column-mini">
+<h1 class="left-navheader-first"><%= @marca %> - <%= @modelo.nome %> (<%= @modelo.ano %>) </h1>
+
+
+<div class="plain DataUnit">
+<table>
+  <tr>
+    <th class="header">MARCA</th>
+    <td class="value"><%= @marca %></td>
+  </tr>
+  <tr>
+    <th class="header">MODELO</th>
+    <td class="value"><%= @modelo.nome %></td>
+  </tr>
+  <tr>
+    <th class="header">ANO</th>
+    <td class="value"><%= @modelo.ano %></td>
+  </tr>
+  <tr>
+    <th class="header">WEBSITE</th>
+    <td class="value"><%= @modelo.website %></td>
+  </tr>
+  <tr>
+    <th class="header">FOTO</th>
+    <td class="value"><%= image_tag("/application/code_image_modelos?id=#{@modelo.id}", :alt => "Image", :size => "300x250" ) %></td>
+  </tr>
+</table>
+</div>
+<div class="middle-column-box-title-destaque">Miniaturas</div>
+<div class="plain">
+  <table>
+    <% @miniaturas.each do |mini| %>
+        <tr>
+          <td> <%= mini.extract_construtor %> </td>
+          <td> <%= mini.extract_escala %> </td>
+          <td> <%= link_to "Ver" , utilizadores_miniatura_path(mini) %> </td>
+        </tr>
+    <% end %>
+    <%= will_paginate @miniaturas %>
+  </table>
+</div>
+<%= link_to "Mais fotos", utilizadores_modelo_foto_modelos_path(@modelo) %>
+<!--<%= link_to "Voltar a Modelos" , utilizadores_modelos_path %>-->
+</div>
+
+<div id="right-column-mini">
+  <div class="middle-column-box-title-destaque-semf">
+     Mais Fotografias
+  </div>
+  <div class="plain">
+    <table>
+      <% @fotos.each do |foto| %>
+          <tr>
+            <td>
+             <%= image_tag("/application/code_image_foto_modelos?id=#{foto.id}", :alt => "Image", :size => "250x200" ) %>
+            </td>
+          </tr>
+      <% end %>
+    </table>
+  </div>
+  <%= will_paginate @fotos%>
+</div>
+
+

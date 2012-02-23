@@ -1,0 +1,2 @@
+module Utilizadores::TiposHelper
+end

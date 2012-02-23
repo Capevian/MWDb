@@ -1,0 +1,31 @@
+<h1>Editar Miniatura</h1>
+
+
+<%= form_for(@miniatura , :url => admin_miniatura_path(@miniatura)) do |f| %>
+    <%= render 'shared/error_messages', :object=> f.object %>
+    <div class="field">
+      <%= f.label :descricao %><br/>
+      <%= f.text_field :descricao %>
+    </div>
+    <div class="field">
+      <%= f.label "Foto (Tamanho Max 500kb)" %> <br/>
+      <%= f.file_field :thumb %>
+    </div>
+    <div class="field">
+      <%= f.label "Modelo" %> <br/>
+      <%= f.collection_select :modelo_id ,@modelos, :id, :nome ,{:prompt => true} %>
+    </div>
+    <div class="field">
+      <%= f.label "Construtor" %> <br/>
+      <%= f.collection_select :construtor_id ,@construtors, :id, :nome, {:prompt => true} %>
+    </div>
+    <div class="field">
+      <%= f.label "Escala" %> <br/>
+      <%= f.collection_select :escala_id ,@escalas , :id, :descricao %>
+    </div>
+    <br/>
+    <div class="actions">
+      <%= f.submit "Actualizar" %>
+    </div>
+
+<% end %>

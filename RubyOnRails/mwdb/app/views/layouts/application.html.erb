@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html>
+    <head>
+        <title><%=@title%></title>
+        <%= csrf_meta_tag %>
+        <%= render 'layouts/stylesheets' %>
+        <%= javascript_include_tag :application %>
+        <link href='http://fonts.googleapis.com/css?family=Lilita+One' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div id="wrap">
+                  <%= render 'layouts/header' %>
+
+    <!-- MIDDLE COLUMN -->
+    <div id="middle-column">
+
+        <div class="container">
+
+          <section class="round">
+            <!--Estas 2 linhas sao para um efeito manhoso no signin...-->
+            <!--É escrito primeiro aqui e depois no UsersController atribuida a variavel  de sucesso-->
+            <% flash.each do |key,value| %>
+                <div class="flash<%= key %>"><%= value%></div>
+            <% end %>
+
+
+            <%=yield%>
+
+
+          </section>
+
+        </div>
+    </div>
+          <br style="clear: both;" />
+
+          <%= render 'layouts/footer' %>
+          <br /><br /><br /><br />
+          <!--<%= debug(params) if Rails.env.development? %> -->
+    </div>
+    </body>
+</html>

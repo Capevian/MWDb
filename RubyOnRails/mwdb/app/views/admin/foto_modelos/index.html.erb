@@ -1,0 +1,14 @@
+<h1>Todas as Fotos para este modelo</h1>
+
+
+
+<ul>
+  <% @foto_modelos.each do |foto| %>
+    <%= image_tag("/application/code_image_foto_modelos?id=#{foto.id}", :alt => "Image", :size => "80x70" ) %>
+    <%= link_to "Remover", admin_modelo_foto_modelo_path(@modelo,foto), :method => :delete %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+<%= link_to "Voltar a Modelos" , admin_modelos_path %>

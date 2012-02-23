@@ -1,0 +1,21 @@
+<h1>Todos os Tipos</h1>
+
+<%= will_paginate %>
+
+
+<div class="listas">
+  <% @tipos.each do |tipo| %>
+    <div>
+
+          <span class="listasDesc"><%= tipo.descricao %></span>
+          <%= image_tag("/application/code_tipo_thumb?id=#{tipo.id}", :alt => "Image", :size => "150x120" ) %>
+            <%= link_to "Editar" , edit_admin_tipo_path(tipo) %> |
+            <%= link_to "Remover" , admin_tipo_path(tipo), :method => :delete %>
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate %>
+<br style="clear: both;"/>
+
+<%= link_to "Voltar a Administração" , admin_path %>

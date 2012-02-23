@@ -1,0 +1,14 @@
+<h1>Todas as Fotos para esta Miniatura</h1>
+
+
+
+<ul>
+  <% @foto_miniaturas.each do |foto| %>
+    <%= image_tag("/application/code_image_foto_miniaturas?id=#{foto.id}", :alt => "Image", :size => "80x70" ) %>
+    <%= link_to "Remover", admin_miniatura_foto_miniatura_path(@miniatura,foto), :method => :delete %>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+
+<%= link_to "Voltar a Miniaturas" , admin_miniaturas_path %>

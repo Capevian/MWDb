@@ -1,0 +1,27 @@
+<% if signed_in? %>
+    <h1> Miniature World Database - Home </h1>
+
+<div class="plain DataUnit">
+    <table>
+        <tr>
+            <th class="header">ÚLTIMA MINIATURA</th>
+            <td class="value"> <%= Construtor.find_by_id(@miniatura.construtor_id).nome %> <%= Escala.find_by_id(@miniatura.escala_id).descricao %></td>
+        </tr>
+        <tr>
+            <th class="header">FOTO</th>
+            <td class="value"><%= image_tag("/application/code_image_miniaturas?id=#{@miniatura.id}", :alt => "Image", :size => "290x190" ) %></td>
+        </tr>
+        <tr>
+            <th class="header">DESCRIÇÃO</th>
+            <td class="value"><%= Modelo.find_by_id(@miniatura.modelo_id).nome %></td>
+        </tr>
+    </table>
+</div>
+    <% else %>
+<h1> Miniature World Database - Home </h1>
+<p> Para entrar clique em Entrar</p>
+<p>Ainda não está registado?: Registe-se <%= link_to "aqui!",signup_path %></p>
+
+<% end %>
+
+

@@ -1,0 +1,24 @@
+<h1>Miniaturas</h1>
+
+<%= will_paginate %>
+
+<div class="listas">
+  <% @miniaturas.each do |miniatura| %>
+       <div>
+         <table>
+           <td>
+            <tr><%= Construtor.find_by_id(miniatura.construtor_id).nome %></tr><br/>
+            <tr><%= Marca.find_by_id(Modelo.find_by_id(miniatura.modelo_id).marca_id).nome %></tr><br/>
+            <tr><%= Modelo.find_by_id(miniatura.modelo_id).nome %></tr><br/>
+            <tr><%= image_tag("/application/code_image_miniaturas?id=#{miniatura.id}", :alt => "Image", :size => "150x120" ) %></tr>
+            <tr><%= link_to "Detalhes", utilizadores_miniatura_path(miniatura) %></tr>
+           </td>
+         </table>
+       </div>
+  <% end %>
+</div>
+
+<%= will_paginate %>
+
+<br style="clear: both;"/>
+<br style="clear: both;"/>

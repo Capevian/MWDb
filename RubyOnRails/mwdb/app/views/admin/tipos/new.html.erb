@@ -1,0 +1,19 @@
+<h1>Novo Tipo</h1>
+
+<%= form_for( @tipo , :url => admin_tipos_path , :html =>{:multipart => true}) do |f| %>
+    <%= render 'shared/error_messages', :object=> f.object %>
+    <div class="field">
+      <%= f.label :descricao %><br/>
+      <%= f.text_field :descricao %>
+    </div>
+    <div class="field">
+      <%= f.label "Imagem (max: 500kb)" %><br/>
+      <%= f.file_field :thumb %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Criar Tipo" %>
+    </div>
+<% end %>
+
+<%= link_to "Voltar a Administração" , admin_path %>
